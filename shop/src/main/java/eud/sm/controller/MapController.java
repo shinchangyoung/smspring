@@ -42,4 +42,34 @@ public class MapController {
         model.addAttribute("left",dir+"left");
         return "index";
     }
+    @RequestMapping("/map5")
+    public String map5(Model model) {
+        model.addAttribute("center",dir+"map5");
+        model.addAttribute("left",dir+"left");
+        return "index";
+    }
+    @RequestMapping("/map6")
+    public String map6(Model model) {
+        model.addAttribute("center",dir+"map6");
+        model.addAttribute("left",dir+"left");
+        return "index";
+    }
+    @RequestMapping("/map7")
+    public String map7(Model model) {
+        model.addAttribute("center",dir+"map7");
+        model.addAttribute("left",dir+"left");
+        return "index";
+    }
+    @RequestMapping("/map8")
+    public String map8(Model model) {
+        model.addAttribute("center",dir+"map8");
+        model.addAttribute("left",dir+"left");
+        return "index";
+    }
+    @RequestMapping("/go")
+    public String go(Model model) {
+        model.addAttribute("center",dir+"go");
+        model.addAttribute("left",dir+"left");
+        return "index";
+    }
 }
