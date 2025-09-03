@@ -1,16 +1,23 @@
 package eud.sm.controller;
 
+import eud.sm.app.dto.Marker;
+import eud.sm.app.service.MarkerService;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @Slf4j
 @RequestMapping("/map")
+@RequiredArgsConstructor
 public class MapController {
 
     String dir="map/";
+    final MarkerService markerService;
+
 
     @RequestMapping("")
     public String main(Model model) {
@@ -66,8 +73,16 @@ public class MapController {
         model.addAttribute("left",dir+"left");
         return "index";
     }
+    @RequestMapping("/maptest")
+    public String maptest(Model model) {
+        model.addAttribute("center",dir+"maptest");
+        model.addAttribute("left",dir+"left");
+        return "index";
+    }
     @RequestMapping("/go")
-    public String go(Model model) {
+    public String go(Model model, @RequestParam("target") int target) throws Exception {
+        Marker marker = markerService.get(target);
+        model.addAttribute("marker",marker);
         model.addAttribute("center",dir+"go");
         model.addAttribute("left",dir+"left");
         return "index";

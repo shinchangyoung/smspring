@@ -27,6 +27,9 @@
     <li class="nav-item">
       <a class="nav-link" href="<c:url value="/map/map8"/>">map8</a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="<c:url value="/map/maptest"/>">maptest</a>
+    </li>
   </ul>
   <hr class="d-sm-none">
 </div>
