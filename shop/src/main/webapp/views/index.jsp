@@ -11,7 +11,7 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey="></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d22ea3311c2736901f0453c68b914e19&libraries=services"></script>
 
   <style>
     .fakeimg {

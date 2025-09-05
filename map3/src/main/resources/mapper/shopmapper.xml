@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.sm.app.repository.ShopRepository">
+    <select id="findByCateNo" parameterType="Integer" resultType="Shop">
+        SELECT * FROM shop WHERE cateNo=#{cateNo}
+    </select>
+    <select id="select" parameterType="Integer" resultType="Shop">
+        SELECT * FROM shop WHERE target=#{target}
+    </select>
+    <select id="selectAll" resultType="Shop">
+        SELECT * FROM shop
+    </select>
+    <insert id="insert" parameterType="Shop">
+        INSERT INTO shop VALUES (#{target},#{title},#{img}, #{lat}, #{lng}, #{loc})
+    </insert>
+    <update id="update" parameterType="Shop">
+        UPDATE shop SET title=#{title},img=#{img}, lat=#{lat}, lng=#{lng}, loc=#{loc} WHERE target=#{target}
+    </update>
+    <delete id="delete" parameterType="Integer">
+        DELETE FROM shop WHERE target=#{target}
+    </delete>
+
+</mapper>

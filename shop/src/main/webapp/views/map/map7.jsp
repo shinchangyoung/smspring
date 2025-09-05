@@ -9,90 +9,63 @@
 </style>
 <script>
     let map1 = {
-        Map: null,
-        randomMarker: null, // 랜덤 마커를 저장할 변수명 변경
-        randomInfowindow: null, // 랜덤 인포윈도우를 저장할 변수명 변경
-        randomInterval: null, // 타이머 객체를 저장할 변수
+        map:null,
+        marker:null,
+        init:function(){
+            this.makeMap();
+            setInterval(()=>{this.getData()}, 3000);
+        },
+        getData:function(){
+            $.ajax({
+                url:'/getlatlng',
+                success:(result)=>{
+                    this.showMarker(result);
+                }
+            });
+        },
+        showMarker:function(result){
+            if (this.marker) {
+                this.marker.setMap(null);
+            }
 
-        init: function() {
+            let imgSrc = '<c:url value="/img/bike2.jpg"/> ';
+            let imgSize = new kakao.maps.Size(30,30);
+            let markerImg = new kakao.maps.MarkerImage(imgSrc, imgSize);
+            let position = new kakao.maps.LatLng(result.lat, result.lng);
+            this.marker = new kakao.maps.Marker({
+                image: markerImg,
+                position:position
+            });
+
+            this.marker.setMap(this.map);
+        },
+        makeMap:function(){
             let mapContainer = document.getElementById('map1');
             let mapOption = {
                 center: new kakao.maps.LatLng(36.800209, 127.074968),
                 level: 7
-            };
-            this.Map = new kakao.maps.Map(mapContainer, mapOption);
+            }
+            this.map = new kakao.maps.Map(mapContainer, mapOption);
+            let mapTypeControl = new kakao.maps.MapTypeControl();
+            this.map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+            let zoomControl = new kakao.maps.ZoomControl();
+            this.map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
-            // 기존 마커 및 이벤트 설정 (요청에 따라 삭제 또는 유지 가능)
+            // Marker 생성
             let markerPosition  = new kakao.maps.LatLng(36.800209, 127.074968);
             let marker = new kakao.maps.Marker({
                 position: markerPosition,
-                map:this.Map
+                map:this.map
             });
-            let iwContent = '<p>Info Window</p>';
-            let infowindow = new kakao.maps.InfoWindow({
-                content : iwContent
-            });
-            kakao.maps.event.addListener(marker, 'mouseover', function(){
-                infowindow.open(this.Map, marker);
-            });
-            kakao.maps.event.addListener(marker, 'mouseout', function(){
-                infowindow.close();
-            });
-            kakao.maps.event.addListener(marker, 'click', function(){
-                location.href='<c:url value="/cust/get"/> '
-            });
-
-            // 1초마다 무작위 마커를 표시하는 함수를 호출
-            let self = this;
-            this.randomInterval = setInterval(function() {
-                self.updateRandomMarker();
-            }, 1000); // 1000ms = 1초
-        },
-
-        // 무작위 위치에 마커와 인포윈도우를 업데이트하는 함수
-        updateRandomMarker: function() {
-            let bounds = this.Map.getBounds();
-            let swLatLng = bounds.getSouthWest(); // 지도의 남서쪽 좌표
-            let neLatLng = bounds.getNorthEast(); // 지도의 북동쪽 좌표
-
-            let swLat = swLatLng.getLat();
-            let swLng = swLatLng.getLng();
-            let neLat = neLatLng.getLat();
-            let neLng = neLatLng.getLng();
-
-            // 현재 지도 경계 내에서 무작위 위도와 경도 생성
-            let randomLat = swLat + (neLat - swLat) * Math.random();
-            let randomLng = swLng + (neLng - swLng) * Math.random();
-            let randomLatLng = new kakao.maps.LatLng(randomLat, randomLng);
-
-            // 기존 마커가 있으면 지도에서 제거
-            if (this.randomMarker) {
-                this.randomMarker.setMap(null);
-            }
-
-            // 기존 인포윈도우가 있으면 닫기
-            if (this.randomInfowindow) {
-                this.randomInfowindow.close();
-            }
-
-            // 새로운 마커를 무작위 위치에 생성
-            this.randomMarker = new kakao.maps.Marker({
-                position: randomLatLng,
-                map: this.Map
-            });
-
-            this.randomInfowindow.open(this.Map, this.randomMarker);
         }
-    };
-
+    }
     $(function(){
-        map1.init();
-    });
+        map1.init()
+    })
 </script>
 
-<div class="col-sm-10">
-    <h2>Map7</h2>
-    <h3>오후 과정</h3>
 
+<div class="col-sm-10">
+    <h2>Map4</h2>
     <div id="map1"></div>
 </div>

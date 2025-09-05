@@ -2,19 +2,19 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="eud.sm.app.repository.SearchRepository">
+<mapper namespace="edu.sm.app.repository.SearchRepository">
 
-    <select id="findByAddtAndType" parameterType="Integer" resultType="Search">
-        SELECT * FROM search where
+    <select id="findByAddrAndType" parameterType="Integer" resultType="Search">
+        SELECT * FROM search where type = #{type}
     </select>
     <select id="selectAll" resultType="Search">
         SELECT * FROM search
     </select>
     <insert id="insert" parameterType="Search">
-        INSERT INTO search VALUES (#{type}, #{name})
+        INSERT INTO search VALUES (#{type}, #{addr})
     </insert>
     <update id="update" parameterType="Search">
-        UPDATE search SET type=#{type}, name=#{name} where type=#{type};
+        UPDATE search SET type=#{type}, addr=#{addr} where type=#{type}
     </update>
     <delete id="delete" parameterType="Search">
         DELETE FROM search WHERE type=#{type}

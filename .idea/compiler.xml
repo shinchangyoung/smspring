@@ -11,12 +11,38 @@
         <module name="shop.test" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="iot" target="17" />
+      <module name="iot.main" target="17" />
+      <module name="iot.test" target="17" />
+      <module name="map" target="17" />
+      <module name="map.main" target="17" />
+      <module name="map.test" target="17" />
+      <module name="map2" target="17" />
+      <module name="map2.main" target="17" />
+      <module name="map2.test" target="17" />
+      <module name="mep" target="17" />
+      <module name="mep.main" target="17" />
+      <module name="mep.test" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="admin" options="-parameters" />
       <module name="admin.main" options="-parameters" />
       <module name="admin.test" options="-parameters" />
+      <module name="map" options="-parameters" />
+      <module name="map.main" options="-parameters" />
+      <module name="map.test" options="-parameters" />
+      <module name="map2" options="-parameters" />
+      <module name="map2.main" options="-parameters" />
+      <module name="map2.test" options="-parameters" />
+      <module name="map3" options="-parameters" />
+      <module name="map3.main" options="-parameters" />
+      <module name="map3.test" options="-parameters" />
+      <module name="mep" options="-parameters" />
+      <module name="mep.main" options="-parameters" />
+      <module name="mep.test" options="-parameters" />
       <module name="shop" options="-parameters" />
       <module name="shop.main" options="-parameters" />
       <module name="shop.test" options="-parameters" />

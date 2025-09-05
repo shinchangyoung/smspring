@@ -33,6 +33,10 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 
+    // JSON
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+
+    implementation 'com.github.ulisesbocchio:jasypt-spring-boot-starter:3.0.3'
 
     //tomcat
     implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'

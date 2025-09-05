@@ -55,13 +55,13 @@
             $('#shop_btn').click(()=>{
                 this.showMarkers(null);
                 this.markers = [];
-                this.type = 20;
+                this.type = 10;
                 this.getData()
             });
             $('#hos_btn').click(()=>{
                 this.showMarkers(null);
                 this.markers = [];
-                this.type = 30;
+                this.type = 20;
                 this.getData()
             });
         },
