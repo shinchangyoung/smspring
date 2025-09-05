@@ -1,0 +1,33 @@
+server:
+  port: 8443 #https://10.20.36.49:8443
+  ssl:
+    enabled: true
+    key-store: classpath:keystore.p12     # src/main/resources에 p12 파일 복사
+    key-store-password: ENC(m90iLjAYPAsMSYEMNfP84Q==)
+    key-store-type: PKCS12  # 인증서 형식
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+spring:
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/shopdb?serverTimezone=Asia/Seoul
+    username: smuser
+    password: ENC(m90iLjAYPAsMSYEMNfP84Q==)
+mybatis:
+  type-aliases-package: edu.sm.app.dto
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    root: info
+
+    #Application Config
+app:
+  key:
+    skey: ${MY_KEY} #config에서 넣었던 키;
