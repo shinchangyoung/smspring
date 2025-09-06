@@ -27,7 +27,6 @@ class SelectTests {
     @Test
     void contextLoads() {
         try {
-
             List<Marker> list = markerService.get();
             list.forEach((data)->{log.info(data.toString());});
 
@@ -37,31 +36,8 @@ class SelectTests {
             List<Marker> list2 = markerService.findByLoc(200);
             list2.forEach((data)->{log.info(data.toString());});
 
-//            List<Search> list2 = searchService.findByAddtAndType(10);
-//            list2.forEach((data)->{log.info(data.toString());});
-
-//            List<Marker> list2 = markerService.findByLoc(200);
-//            list2.forEach((data)->{log.info(data.toString());});
-            
-//            List<Content> list2 = contentService.get();
-//            list2.forEach(System.out::println);
-
-//            Search search = searchService.get(10);
-//            log.info(search.toString());
-//
-//            List<Search> list3 = searchService.get();
-//            list3.forEach(System.out::println);
-//
-//            Content content = contentService.get(101);
-//            log.info(content.toString());
-
-
-
-
-
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
-
-}
+    }

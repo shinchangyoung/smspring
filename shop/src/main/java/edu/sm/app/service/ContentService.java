@@ -20,17 +20,17 @@ public class ContentService implements SmService<Content, Integer> {
 
     @Override
     public void register(Content content) throws Exception {
-
+        contentRepository.insert(content); // 'insert'는 Repository의 실제 메소드명으로 변경해야 합니다.
     }
 
     @Override
     public void modify(Content content) throws Exception {
-
+        contentRepository.update(content); // 'update'는 Repository의 실제 메소드명으로 변경해야 합니다.
     }
 
     @Override
-    public void remove(Integer integer) throws Exception {
-
+    public void remove(Integer contentId) throws Exception {
+        contentRepository.delete(contentId); // 'delete'는 Repository의 실제 메소드명으로 변경해야 합니다.
     }
 
     @Override
@@ -39,7 +39,7 @@ public class ContentService implements SmService<Content, Integer> {
     }
 
     @Override
-    public Content get(Integer integer) throws Exception {
-        return contentRepository.select(integer);
+    public Content get(Integer contentId) throws Exception {
+        return contentRepository.select(contentId);
     }
 }
