@@ -1,6 +1,5 @@
 package edu.sm.controller;
 
-import com.github.pagehelper.PageInfo;
 import edu.sm.app.dto.Cust;
 import edu.sm.app.service.CustService;
 import jakarta.servlet.http.HttpSession;
@@ -13,8 +12,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.List;
-
 @Controller
 @Slf4j
 @RequiredArgsConstructor
@@ -24,6 +21,12 @@ public class LoginController {
     final BCryptPasswordEncoder bCryptPasswordEncoder;
     final StandardPBEStringEncryptor standardPBEStringEncryptor;
 
+    @RequestMapping("/updatepwd")
+    public String updatepwd(Model model) {
+        model.addAttribute("center","updatepwd");
+        model.addAttribute("left","left");
+        return "index";
+    }
     @RequestMapping("/register")
     public String main(Model model) {
         model.addAttribute("center","register");
@@ -37,14 +40,6 @@ public class LoginController {
         custService.register(cust);
         return "redirect:/login";
     }
-
-    @RequestMapping("/login")
-    public String add(Model model) {
-        model.addAttribute("center","login");
-        model.addAttribute("left","left");
-        return "index";
-    }
-
     @RequestMapping("/custinfo")
     public String custinfo(Model model, @RequestParam("id") String id) throws Exception {
         Cust dbCust = custService.get(id);
@@ -55,26 +50,27 @@ public class LoginController {
         model.addAttribute("center","custinfo");
         return "index";
     }
-
     @RequestMapping("/updatecustinfo")
     public String updatecustinfo(Model model, Cust cust) throws Exception {
         boolean result = bCryptPasswordEncoder.matches(cust.getCustPwd(),
                 custService.get(cust.getCustId()).getCustPwd());
-        System.out.println(result);
+
         if(result != true){
-            model.addAttribute("msg","비밀번호가 일치하지 않습니다.");
+            model.addAttribute("msg","비밀번호가 틀렸습니다.");
             model.addAttribute("center","error");
             return "index";
         }
         cust.setCustAddr(standardPBEStringEncryptor.encrypt(cust.getCustAddr()));
-        cust.setCustPwd(standardPBEStringEncryptor.encrypt(cust.getCustPwd()));
+        cust.setCustPwd(bCryptPasswordEncoder.encode(cust.getCustPwd()));
         custService.modify(cust);
-
-        model.addAttribute("center","login");
-        model.addAttribute("msg","로그인 실패!!!");
-        return "redirect:/";
+        return "redirect:/custinfo?id=" + cust.getCustId();
     }
-
+    @RequestMapping("/login")
+    public String add(Model model) {
+        model.addAttribute("center","login");
+        model.addAttribute("left","left");
+        return "index";
+    }
     @RequestMapping("/loginimpl")
     public String loginimpl(Model model, @RequestParam("id") String id,
                             @RequestParam("pwd") String pwd,
@@ -94,5 +90,24 @@ public class LoginController {
             httpSession.invalidate();
         }
         return "redirect:/";
+    }
+
+    @RequestMapping("/updatepwdimpl")
+    public String updatepwd(Model model, @RequestParam("pwd") String pwd,
+                            @RequestParam("new_pwd") String new_pwd,
+                            HttpSession httpSession) throws Exception {
+        Cust sessionCust = (Cust) httpSession.getAttribute("cust");
+        boolean result = bCryptPasswordEncoder.matches(pwd, sessionCust.getCustPwd());
+        if(result != true){
+            model.addAttribute("msg","비밀번호가 틀렸습니다.");
+        }else{
+            // 신규 비밀번호 변경
+            sessionCust.setCustPwd(bCryptPasswordEncoder.encode(new_pwd));
+            custService.modify(sessionCust);
+            model.addAttribute("msg","비밀번호가 수정 되었습니다.");
+        }
+        model.addAttribute("center","updatepwd");
+
+        return "index";
     }
 }
