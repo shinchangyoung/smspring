@@ -8,7 +8,7 @@
     <c:choose>
       <c:when test="${cpage.getPrePage() != 0}">
         <li class="page-item">
-          <a  class="page-link"  href="<c:url value="/${target}/findimpl?pageNo=${cpage.getPrePage()}&keyword=${search.keyword}&search=${search.search}" />">Previous</a>
+          <a  class="page-link"  href="<c:url value="${target}/searchpage?pageNo=${cpage.getPrePage()}&custName=${custName}&startDate=${startDate}&endDate=${endDate}" />">Previous</a>
         </li>
       </c:when>
       <c:otherwise>
@@ -22,12 +22,12 @@
       <c:choose>
         <c:when test="${cpage.getPageNum() == page}">
           <li class="page-item active">
-            <a class="page-link"  href="<c:url value="/${target}/findimpl?pageNo=${page}&keyword=${search.keyword}&search=${search.search}" />">${page }</a>
+            <a class="page-link"  href="<c:url value="${target}/searchpage?pageNo=${page}&custName=${custName}&startDate=${startDate}&endDate=${endDate}" />">${page }</a>
           </li>
         </c:when>
         <c:otherwise>
           <li class="page-item">
-            <a class="page-link"  href="<c:url value="/${target}/findimpl?pageNo=${page}&keyword=${search.keyword}&search=${search.search}" />">${page }</a>
+            <a class="page-link"  href="<c:url value="${target}/searchpage?pageNo=${page}&custName=${custName}&startDate=${startDate}&endDate=${endDate}" />">${page }</a>
           </li>
         </c:otherwise>
       </c:choose>
@@ -36,7 +36,7 @@
     <c:choose>
       <c:when test="${cpage.getNextPage() != 0}">
         <li class="page-item">
-          <a class="page-link"  href="<c:url value="/${target}/findimpl?pageNo=${cpage.getNextPage()}&keyword=${search.keyword}&search=${search.search}" />">Next</a>
+          <a class="page-link"  href="<c:url value="${target}/searchpage?pageNo=${cpage.getNextPage()}&custName=${custName}&startDate=${startDate}&endDate=${endDate}" />">Next</a>
         </li>
       </c:when>
       <c:otherwise>
@@ -48,6 +48,4 @@
 
   </ul>
 </div>
-<!-- pagination end -->
-
 <!-- pagination end -->

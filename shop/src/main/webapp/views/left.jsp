@@ -4,14 +4,22 @@
   <p>Left Menu</p>
   <ul class="nav nav-pills flex-column">
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="<c:url value="/audio"/> ">Audio</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="<c:url value="/pic"/> ">Pic</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="<c:url value="/wt1"/> ">weather1</a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="<c:url value="/wt2"/> ">weather2</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="<c:url value="/wt3"/> ">weather3</a>
+    </li>
+
+
   </ul>
   <hr class="d-sm-none">
 </div>

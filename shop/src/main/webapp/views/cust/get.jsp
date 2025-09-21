@@ -4,6 +4,11 @@
 
 <div class="col-sm-10">
   <h2>Cust Get Page</h2>
+
+
+
+ <jsp:include page="search.jsp?type=get"/>
+
   <table class="table table-bordered">
     <thead>
     <tr>

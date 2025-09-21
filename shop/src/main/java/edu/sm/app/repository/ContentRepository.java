@@ -9,6 +9,6 @@ import java.util.List;
 @Repository
 @Mapper
 public interface ContentRepository extends SmRepository<Content, Integer> {
-    List<Content> findByAddrAndType(int type);
+//    List<Content> findByAddrAndType(int type);
     List<Content> findByTargetAndType(int target, int type);
 }

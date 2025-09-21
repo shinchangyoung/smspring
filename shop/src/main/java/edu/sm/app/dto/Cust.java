@@ -20,3 +20,4 @@ public class Cust {
     private LocalDateTime custRegdate;
     private LocalDateTime custUpdate;
 }
+

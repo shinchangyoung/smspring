@@ -78,6 +78,7 @@ public class LoginController {
         Cust dbCust = custService.get(id);
         if(dbCust != null && bCryptPasswordEncoder.matches(pwd, dbCust.getCustPwd())){
             httpSession.setAttribute("cust",dbCust);
+            log.info(dbCust.getCustId()+","+dbCust.getCustName());
             return "redirect:/";
         }
         model.addAttribute("center","login");
@@ -93,7 +94,7 @@ public class LoginController {
     }
 
     @RequestMapping("/updatepwdimpl")
-    public String updatepwd(Model model, @RequestParam("pwd") String pwd,
+    public String updatepwdimpl(Model model, @RequestParam("pwd") String pwd,
                             @RequestParam("new_pwd") String new_pwd,
                             HttpSession httpSession) throws Exception {
         Cust sessionCust = (Cust) httpSession.getAttribute("cust");

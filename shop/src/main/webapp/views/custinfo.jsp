@@ -2,21 +2,21 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <script>
   const custinfo = {
-    init : function () {
-      $('#update_btn').click(() => {
+    init:function(){
+      $('#update_btn').click(()=>{
         this.send();
       });
-      $('#update_pwd_btn').click(() => {
-        this.send();
+      $('#update_pwd_btn').click(()=>{
+        location.href='<c:url value="/updatepwd"/> ';
       });
     },
-    send: function (){
+    send:function(){
       $('#custinfo_form').attr('method','post');
       $('#custinfo_form').attr('action','<c:url value="/updatecustinfo"/>');
       $('#custinfo_form').submit();
     }
   }
-  $(function (){
+  $(function(){
     custinfo.init();
   });
 </script>

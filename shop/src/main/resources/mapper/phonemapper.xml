@@ -4,26 +4,30 @@
 
     <select id="getSalesByBrand" resultType="java.util.Map">
         SELECT
-        phone_name,
-        month,
-        SUM(price) as value
+            month,
+            phone_name,
+            SUM(price) AS value
         FROM phone
         GROUP BY
-        phone_name, month
+            month,
+            phone_name
         ORDER BY
-        phone_name, month
+            month,
+            phone_name
     </select>
 
     <select id="getAverageSalesByBrand" resultType="java.util.Map">
         SELECT
-        phone_name,
-        month,
-        AVG(price) as value
+            month,
+            phone_name,
+            round(avg(price),0) AS value
         FROM phone
         GROUP BY
-        phone_name, month
+            month,
+            phone_name
         ORDER BY
-        phone_name, month
+            month,
+            phone_name
     </select>
 
 </mapper>

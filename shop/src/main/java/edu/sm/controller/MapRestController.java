@@ -60,12 +60,12 @@ public class MapRestController {
         return "ok";
     }
 
-    @RequestMapping("/getcontents")
-    public Object getcontents(@RequestParam("target") int target, @RequestParam("type") int type) throws Exception {
-        log.info(target+" "+type);
-        List<Content> contents = contentService.findByTargetAndType(target, type);
-        return contents;
-    }
+//    @RequestMapping("/getcontents")
+//    public Object getcontents(@RequestParam("target") int target, @RequestParam("type") int type) throws Exception {
+//        log.info(target+" "+type);
+//        List<Content> contents = contentService.findByTargetAndType(target, type);
+//        return contents;
+//    }
 
 
 

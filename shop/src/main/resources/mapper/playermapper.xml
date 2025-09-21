@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.sm.app.repository.PlayerRepository">
+
+    <select id="select" parameterType="String" resultType="Player">
+        SELECT *
+        FROM player
+        <where>
+            <if test="playerName != null and playerName != ''">
+                player_name LIKE CONCAT('%', #{playerName}, '%')
+            </if>
+        </where>
+    </select>
+
+
+    <select id="selectPlayersChoose" resultType="Player">
+        SELECT *
+        FROM splayer
+        <where>
+            <choose>
+                <when test="position != null">
+                    position = #{position}
+                </when>
+                <when test="age != null">
+                    age >= #{age}
+                </when>
+                <otherwise>
+                    1=1
+                </otherwise>
+            </choose>
+        </where>
+        <if test="position == null and age == null">
+            ORDER BY salary DESC
+        </if>
+    </select>
+
+    <select id="selectAll" resultType="Player">
+        SELECT * FROM player
+    </select>
+
+
+
+</mapper>

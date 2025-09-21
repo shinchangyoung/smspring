@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +13,18 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d22ea3311c2736901f0453c68b914e19&libraries=services"></script>
+<%--hightchart--%>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+  <script src="https://code.highcharts.com/modules/cylinder.js"></script>
+  <script src="https://code.highcharts.com/modules/wordcloud.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="https://code.highcharts.com/themes/adaptive.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+
+
 
   <style>
     .fakeimg {
@@ -25,6 +38,7 @@
 <div class="jumbotron text-center" style="margin-bottom:0">
   <h1>My First Bootstrap 4 Page</h1>
   <p>Resize this responsive page to see the effect!</p>
+  <h1><spring:message code="site.title"  arguments="aa,aa"  /></h1>
 </div>
 <ul class="nav justify-content-end">
   <c:choose>
@@ -63,7 +77,7 @@
         <a class="nav-link" href="<c:url value="/cust"/>">Cust</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<c:url value="/item"/>">Item</a>
+        <a class="nav-link" href="<c:url value="/product"/>">Product</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<c:url value="/map"/> ">Map</a>
