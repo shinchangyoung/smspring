@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/iot3/iot3.iml" filepath="$PROJECT_DIR$/iot3/iot3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/admin.iml" filepath="$PROJECT_DIR$/.idea/modules/admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/admin.main.iml" filepath="$PROJECT_DIR$/.idea/modules/admin.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/admin.test.iml" filepath="$PROJECT_DIR$/.idea/modules/admin.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iot9/iot9.iml" filepath="$PROJECT_DIR$/iot9/iot9.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/map3.main.iml" filepath="$PROJECT_DIR$/.idea/modules/map3.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/map3.test.iml" filepath="$PROJECT_DIR$/.idea/modules/map3.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybatis.test.iml" filepath="$PROJECT_DIR$/.idea/modules/mybatis.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/shop.main.iml" filepath="$PROJECT_DIR$/.idea/modules/shop.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/shop.test.iml" filepath="$PROJECT_DIR$/.idea/modules/shop.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/smspring.iml" filepath="$PROJECT_DIR$/smspring.iml" />
     </modules>
   </component>
 </project>
