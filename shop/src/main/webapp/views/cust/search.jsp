@@ -9,6 +9,7 @@
     <input type="text" name="custName" class="form-control" id="id" <c:if test="${custName != null}">
            value="${custName}"</c:if>>
   </div>
+
   <div class="form-group">
     <label for="sdate">Start:</label>
     <input type="date" name="startDate" class="form-control" id="sdate" <c:if test="${startDate != null}">
@@ -19,6 +20,7 @@
     <input type="date" name="endDate" class="form-control" id="edate"<c:if test="${endDate != null}">
            value="${endDate}"</c:if>>
   </div>
+
   <div class="form-group">
     <input type="submit" class="btn btn-info">Search</input>
   </div>

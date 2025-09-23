@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <style>
-    #product_table > tbody > tr > td > img{
+    #product_table > tbody > tr > td > img {
         width: 50px;
     }
 </style>
@@ -82,12 +82,12 @@
                         <td><img src="/imgs/${p.productImg}"></td>
                         <td><a href="/product/detail?id=${p.productId}">${p.productId}</a></td>
                         <td>${p.productName}</td>
-                        <td><fmt:formatNumber type="number" pattern="###,###원" value="${p.productPrice}" /></td>
+                        <td><fmt:formatNumber type="number" pattern="###,###원" value="${p.productPrice}"/></td>
                         <td>${p.discountRate}</td>
                         <td>
                             <fmt:parseDate value="${ p.productRegdate }"
-                                           pattern="yyyy-MM-dd HH:mm:ss" var="parsedDateTime" type="both" />
-                            <fmt:formatDate pattern="yyyy년MM월dd일" value="${ parsedDateTime }" />
+                                           pattern="yyyy-MM-dd HH:mm:ss" var="parsedDateTime" type="both"/>
+                            <fmt:formatDate pattern="yyyy년MM월dd일" value="${ parsedDateTime }"/>
                         </td>
                         <td>${p.cateName}</td>
                     </tr>

@@ -14,5 +14,4 @@ public class ProductSearch {
     int startPrice;
     int endPrice;
     int cateId;
-
 }
