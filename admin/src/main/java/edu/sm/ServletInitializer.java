@@ -1,13 +1,9 @@
 package edu.sm;
 
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.boot.SpringApplication;
 
-public class ServletInitializer extends SpringBootServletInitializer {
-
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(AdminApplication.class);
+public class ServletInitializer {
+    public static void main(String[] args) {
+        SpringApplication.run(ServletInitializer.class, args);
     }
-
 }
