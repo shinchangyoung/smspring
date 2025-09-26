@@ -1,6 +1,7 @@
 package edu.sm.controller;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,11 +13,15 @@ import java.util.Random;
 @Controller
 @Slf4j
 public class MainController {
+    @Value("${app.url.websocketurl}")
+    String websocketurl;
+
     @RequestMapping("/")
     public String main(Model model) {
         log.info("Test...");
         Random random = new Random();
-        log.info(""+random.nextInt(100)+1);
+
+       // log.info(""+random.nextInt(100)+1);
         // Database 데이터를 가지고 온다.
         return "index";
     }
@@ -52,6 +57,13 @@ public class MainController {
     @RequestMapping("/wt3")
     public String wt3(Model model) {
         model.addAttribute("center","wt3");
+        model.addAttribute("left","left");
+        return "index";
+    }
+
+    @RequestMapping("/inquiry")
+    public String inquiry(Model model) {
+        model.addAttribute("center","inquiry");
         model.addAttribute("left","left");
         return "index";
     }

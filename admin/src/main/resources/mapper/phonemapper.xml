@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.sm.app.repository.PhoneRepository">
+
+    <select id="getSalesByBrand" resultType="java.util.Map">
+        SELECT
+            month,
+            phone_name,
+            SUM(price) AS value
+        FROM phone
+        GROUP BY
+            month,
+            phone_name
+        ORDER BY
+            month,
+            phone_name
+    </select>
+
+    <select id="getAverageSalesByBrand" resultType="java.util.Map">
+        SELECT
+            month,
+            phone_name,
+            round(avg(price),0) AS value
+        FROM phone
+        GROUP BY
+            month,
+            phone_name
+        ORDER BY
+            month,
+            phone_name
+    </select>
+
+</mapper>

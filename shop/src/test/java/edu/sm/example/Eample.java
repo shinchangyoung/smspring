@@ -1,27 +1,26 @@
 package edu.sm.example;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Eample {
     public static void main(String[] args) {
 
-        List<String> list = new ArrayList<>();
 
-        list.add("신창영");
-        list.add("신우정");
-        list.add("신양호");
-        list.add("신창영"); // 중복을 허용한다.
+// compare(a, b)의 매개변수 a와 b를 람다식으로 표현
+        List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
 
-        System.out.println("전체요소 : " +list); //[신창영, 신우정, 신양호, 신창영]
+        System.out.println(names);
 
-        System.out.println("첫 번째 요소: " + list.get(0)); //첫번쨰 요소 : 신창영
+        Collections.sort(names, (a, b) -> b.compareTo(a));
 
-        list.remove("신창영"); // 첫 번째 "신창영" 삭제
-        System.out.println("삭제 후: " + list);
+        names.sort(Comparator.reverseOrder());
+        System.out.println(names);
 
-        System.out.println("리스트 크기: " + list.size()); // 3
 
+        List<String> items = Arrays.asList("Pen", "Book", "Desk");
+
+// forEach를 사용하여 각 요소 출력
+        items.forEach(item -> System.out.print("Item: " + item + " "));
 
     }
 

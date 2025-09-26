@@ -29,6 +29,22 @@ public class PlayerTest {
             e.printStackTrace();
         }
     }
+
+    @Test
+    void get() {
+        Player player = null;
+        try {
+            player = playerService.get("손흥민");
+                log.info(player.toString());
+
+            log.info("Select All End ------------------------------------------");
+
+        } catch (Exception e) {
+            log.info("Error Test ...");
+            e.printStackTrace();
+        }
+    }
+
 //    @Test
 //    void get() {
 //        Splayer splayer = null;

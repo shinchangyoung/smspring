@@ -24,14 +24,63 @@
   <script src="https://code.highcharts.com/themes/adaptive.js"></script>
   <script src="https://code.highcharts.com/modules/data.js"></script>
 
-
+  <%-- Web Socket Lib --%>
+  <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+  <script src="/webjars/stomp-websocket/stomp.min.js"></script>
 
   <style>
     .fakeimg {
       height: 200px;
       background: #aaa;
     }
+
+    /* Floating Button CSS */
+    .floating-button {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      width: 60px;
+      height: 60px;
+      background-color: #28a745; /* Green color */
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 24px;
+      line-height: 60px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+      text-decoration: none;
+      cursor: pointer; /* 클릭 가능한 요소임을 나타내기 위해 커서 모양 변경 */
+    }
+
+    .floating-button:hover {
+      background-color: #218838; /* Darker green on hover */
+      color: white;
+      text-decoration: none;
+    }
+
   </style>
+
+  <%-- 1:1 문의 기능용 스크립트 --%>
+  <script>
+    $(document).ready(function() {
+      // 1:1 문의 버튼 클릭 이벤트
+      $('#inquiry-button').on('click', function() {
+        // 로그인 상태인지 확인
+        <c:if test="${sessionScope.cust == null}">
+        // 비로그인 상태일 경우
+        alert('로그인이 필요한 서비스입니다.');
+        window.location.href = '<c:url value="/login"/>'; // 로그인 페이지로 이동
+        </c:if>
+
+        <c:if test="${sessionScope.cust != null}">
+        // 로그인 상태일 경우, inquiry 페이지로 이동합니다.
+        window.location.href = '<c:url value="/inquiry"/>';
+        </c:if>
+      });
+    });
+  </script>
+
 </head>
 <body>
 
@@ -85,6 +134,11 @@
       <li class="nav-item">
         <a class="nav-link" href="<c:url value="/chart"/>">Chart</a>
       </li>
+      <c:if test="${sessionScope.cust.custId != null}">
+        <li class="nav-item">
+          <a class="nav-link" href="<c:url value="/chat"/>">Chat</a>
+        </li>
+      </c:if>
     </ul>
   </div>
 </nav>
@@ -118,6 +172,11 @@
 <div class="text-center" style="background-color:black; color: white; margin-bottom:0; max-height: 50px;">
   <p>Footer</p>
 </div>
+
+<%-- Floating Chat Button --%>
+<%-- 1:1 문의를 위한 플로팅 버튼 --%>
+<div id="inquiry-button" class="floating-button">문의</div>
+
 
 </body>
 </html>
