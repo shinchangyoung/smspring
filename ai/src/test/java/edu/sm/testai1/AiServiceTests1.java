@@ -19,6 +19,8 @@ class AiServiceTests1 {
         String quetion ="천안에 맛집 알려줘";
         Flux<String> result = aiService.generateStreamText(quetion);
         result.collectList().block().stream().forEach(System.out::println);
+        //결과가 내려오면 써고 내려오면 써고의 반봅
+//        String result = aiService.generateText(quetion); //String으로 한꺼번에 뿌린다
 //        log.info("result:{}", result);
     }
 }
