@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.sm.app.springai.mapper.CalendarEventMapper">
+
+    <select id="findAllEvents" resultType="edu.sm.app.dto.CalendarEvent">
+        SELECT
+            id,
+            title,
+            start_date AS start,
+            end_date AS end
+        FROM
+            calendar_events
+        ORDER BY
+            start_date
+    </select>
+
+    <insert id="insertEvent" parameterType="edu.sm.app.dto.CalendarEvent">
+        INSERT INTO calendar_events
+            (title, start_date, end_date)
+        VALUES
+            (#{title}, #{start}, #{end})
+    </insert>
+
+</mapper>
