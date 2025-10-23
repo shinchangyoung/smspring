@@ -3,6 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/admin" />
+    <file type="web" url="file://$PROJECT_DIR$/ai" />
     <file type="web" url="file://$PROJECT_DIR$/iot" />
     <file type="web" url="file://$PROJECT_DIR$/map" />
     <file type="web" url="file://$PROJECT_DIR$/map2" />

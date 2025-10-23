@@ -32,6 +32,9 @@
       <module name="admin" options="-parameters" />
       <module name="admin.main" options="-parameters" />
       <module name="admin.test" options="-parameters" />
+      <module name="ai" options="-parameters" />
+      <module name="ai.main" options="-parameters" />
+      <module name="ai.test" options="-parameters" />
       <module name="edu.sm.shop.main" options="-parameters" />
       <module name="edu.sm.shop.test" options="-parameters" />
       <module name="eud.sm.admin.main" options="-parameters" />
