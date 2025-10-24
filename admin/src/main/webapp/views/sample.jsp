@@ -26,10 +26,6 @@
                 <!-- Card Body -->
                 <div class="card-body">
 
-
-
-
-
                 </div>
             </div>
         </div>

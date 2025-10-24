@@ -1,6 +1,7 @@
 package edu.sm.sse;
 
 
+import edu.sm.app.dto.AiMsg;
 import edu.sm.app.dto.AdminMsg;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -8,7 +9,6 @@ import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 import java.io.IOException;
 import java.util.Map;
-import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Component
@@ -17,7 +17,7 @@ public class SseEmitters {
     private final Map<String, SseEmitter> emitters = new ConcurrentHashMap<>();
 
     public void sendData(AdminMsg adminMsg) {
-
+//접속되어있는 admin과 admin2에만 데이터를 단방향으로 전송을 해라
         this.emitters.keySet().stream().filter(s->s.equals("admin") || s.equals("admin2")).forEach(key -> {
             try {
                 log.info("-------------------------------------"+key.toString());
@@ -29,6 +29,53 @@ public class SseEmitters {
             }
         });
     }
+    public void msg(String msg) {
+        this.emitters.values().forEach(emitter -> {
+            try {
+                emitter.send(SseEmitter.event()
+                        .name("msg")
+                        .data(msg)); //object으로 받는데 자동으로 json형식으로 변환
+            } catch ( IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+    public void msg(AiMsg aiMsg) {
+        this.emitters.values().forEach(emitter -> {
+            try {
+                emitter.send(SseEmitter.event()
+                        .name("aimsg")
+                        .data(aiMsg));
+            } catch ( IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+    public void text(String text) {
+        this.emitters.values().forEach(emitter -> {
+            try {
+                emitter.send(SseEmitter.event()
+                        .name("text")
+                        .data(text));
+            } catch ( IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+
+
+    public void question(String question) {
+        this.emitters.values().forEach(emitter -> {
+            try {
+                emitter.send(SseEmitter.event()
+                        .name("question")
+                        .data(question));
+            } catch ( IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+
     public void count(int num) {
 
         this.emitters.values().forEach(emitter -> {

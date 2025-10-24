@@ -12,6 +12,32 @@ spring:
     view:
       prefix: /views/
       suffix: .jsp
+  ai:
+    vectorstore:
+      pgvector:
+        initialize-schema: true
+    openai:
+      #      api-key: ENC(s89aSd0ZWlZ6KU+rGpLpjEAnUE2z5+dqw9d7eJpQRl1Ws+G91vRLc9pr3c9iQ9wP)
+      #      chat:
+      #        options:
+      #          model: gemini-2.0-flash
+      #          temperature: 0.1
+      #          max-tokens: 1000
+      #        completions-path: /v1/chat/completions
+      #        base-url: https://generativelanguage.googleapis.com/v1beta/openai/
+      #      api-key: ENC(1nY9vG63D7qEbdJ5nDrFJh5eYFzNmW1+5YONAYRKa1LwyTjXWZCMmlgWUwVbuDcgFl2lxF33ci2OgTcHcaOEqPJCDjDEcloUUX+Z8lcuQkakTiBLgt8bisdw469yq7P8muFPKeXvJ9G9Fkx4s1Lw11Csa+UKDe1qjr+KDg809mZs2MZ93TuUXgUhRGcaMH9sH8bpytykqN6oGlC5Ql3fDl9OdDt+YUfexyrKrlpaHtk=)
+      #      chat:
+      #        options:
+      #          model: gpt-4.1-mini
+      #          temperature: 0.1
+      #          max-tokens: 1000
+      api-key: ENC(DIrd78xrB30lc2q7A5pW1OwT8+V5LbMcVryz5BbtbHMWa1zwwF6oDzxZGvWb/USsdjDccGQJV+Mx1IOfWiPO5rVG4TYWUuLDXM3U6h08yyAOAy3P2tas2v9yTLZvd9obwh3zcuT6gedYUhugwCdL/EoBq/Hsg01M9ENgrKPIfAeuFHOTu9eqEWMEAzNiPuD9l+4yU8WjNqff698QGXOfHd/nT6yKrVvgXtgaZtbBehs=)
+      chat:
+        options:
+          model: gpt-4.1-mini
+          temperature: 0.1
+          max-tokens: 1000
+
   datasource:
     #url: jdbc:mysql://127.0.0.1:3306/shopdb?serverTimezone=Asia/Seoul
 #    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
@@ -36,10 +62,12 @@ logging:
 #@Value("${}")
 app:
   url:
-    sse: http://192.168.1.2:8444/
-    mainsse: https://192.168.1.2.8443/
-    wsurl: https://192.168.1.2:8443/
-    websockcet: https://192.168.1.2:8443/
+    sse: https://192.168.1.11:8444/
+    mainsse: https://192.168.1.11:8443/
+    websocketurl: https://192.168.1.11:8443/
+#    sse: https://121.127.97.121:8444/
+#    mainsse: https://121.127.97.121:8443/
+#    websocketurl: https://121.127.97.121:8443/
   dir:
     imgsdir: file:///C:/smspring/imgs/     # 화면 출력 용
     uploadimgsdir: C:/smspring/imgs/    # 파일 Write 용
