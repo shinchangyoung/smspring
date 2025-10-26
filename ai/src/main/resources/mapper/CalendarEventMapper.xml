@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="edu.sm.app.springai.mapper.CalendarEventMapper">
+<mapper namespace="edu.sm.app.repository.CalendarRepository">
 
-    <select id="findAllEvents" resultType="edu.sm.app.dto.CalendarEvent">
+    <select id="selectAll" resultType="edu.sm.app.dto.CalendarEvent">
         SELECT
             id,
             title,
@@ -16,11 +16,36 @@
             start_date
     </select>
 
-    <insert id="insertEvent" parameterType="edu.sm.app.dto.CalendarEvent">
+    <select id="select" parameterType="Integer" resultType="edu.sm.app.dto.CalendarEvent">
+        SELECT
+            id,
+            title,
+            start_date AS start,
+            end_date AS end
+        FROM
+            calendar_events
+        WHERE id = #{id}
+    </select>
+
+    <insert id="insert" parameterType="edu.sm.app.dto.CalendarEvent">
         INSERT INTO calendar_events
             (title, start_date, end_date)
         VALUES
             (#{title}, #{start}, #{end})
     </insert>
+
+    <update id="update" parameterType="edu.sm.app.dto.CalendarEvent">
+        UPDATE calendar_events
+        SET
+            title = #{title},
+            start_date = #{start},
+            end_date = #{end}
+        WHERE
+            id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="Integer">
+        DELETE FROM calendar_events WHERE id = #{id}
+    </delete>
 
 </mapper>

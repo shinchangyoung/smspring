@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="edu.sm.app.repository.MenuRepository">
+
+    <insert id="insert" parameterType="edu.sm.app.dto.Menu" useGeneratedKeys="true" keyProperty="menuId">
+        INSERT INTO menu (menu_name, price, image_name, category, description, is_available)
+        VALUES (#{menuName}, #{price}, #{imageName}, #{category}, #{description}, #{isAvailable})
+    </insert>
+
+    <update id="update" parameterType="edu.sm.app.dto.Menu">
+        UPDATE menu SET
+            menu_name = #{menuName},
+            price = #{price},
+            image_name = #{imageName},
+            category = #{category},
+            description = #{description},
+            is_available = #{isAvailable},
+            updated_at = CURRENT_TIMESTAMP
+        WHERE menu_id = #{menuId}
+    </update>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM menu WHERE menu_id = #{menuId}
+    </delete>
+
+    <select id="select" parameterType="int" resultType="edu.sm.app.dto.Menu">
+        SELECT menu_id, menu_name, price, image_name, category, description, is_available,
+               created_at, updated_at
+        FROM menu
+        WHERE menu_id = #{menuId}
+    </select>
+
+    <select id="selectAll" resultType="edu.sm.app.dto.Menu">
+        SELECT menu_id, menu_name, price, image_name, category, description, is_available,
+               created_at, updated_at
+        FROM menu
+        ORDER BY menu_id
+    </select>
+
+    <select id="selectByCategory" parameterType="string" resultType="edu.sm.app.dto.Menu">
+        SELECT menu_id, menu_name, price, image_name, category, description, is_available,
+               created_at, updated_at
+        FROM menu
+        WHERE category = #{category}
+        ORDER BY menu_id
+    </select>
+
+    <select id="selectAvailable" resultType="edu.sm.app.dto.Menu">
+        SELECT menu_id, menu_name, price, image_name, category, description, is_available,
+               created_at, updated_at
+        FROM menu
+        WHERE is_available = true
+        ORDER BY menu_id
+    </select>
+
+</mapper>
