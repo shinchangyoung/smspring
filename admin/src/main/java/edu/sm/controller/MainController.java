@@ -31,6 +31,7 @@ public class MainController {
     @RequestMapping("/chart")
     public String chart(Model model) {
         model.addAttribute("mainsseUrl",mainsseUrl);
+        model.addAttribute("websocketurl",websocketurl);
         model.addAttribute("center","chart");
         return "index";
     }
