@@ -109,6 +109,19 @@
             <maxHistory>30</maxHistory>
         </rollingPolicy>
     </appender>
+    <appender name="LOGINCOUNT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOGS_DIR}/logincount.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss}, %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOGS_DIR}/logincount.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>5MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    </appender>
     <appender name="CLICK" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOGS_DIR}/click.log</file>
         <encoder>
@@ -146,6 +159,9 @@
     </logger>
     <logger name="edu.sm.controller.LoginController" level="INFO">
         <appender-ref ref="LOGIN" />
+    </logger>
+    <logger name="edu.sm.controller.LoginCountLogger" level="INFO">
+        <appender-ref ref="LOGINCOUNT" />
     </logger>
     <logger name="edu.sm.controller.ProductController" level="INFO">
         <appender-ref ref="CLICK" />

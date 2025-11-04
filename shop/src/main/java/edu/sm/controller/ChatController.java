@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class ChatController {
 
     @Value("${app.url.websocketurl}")
-    String websocketurl;
+    String webSocketUrl;
 
     String dir="chat/";
     final MarkerService markerService;
@@ -31,7 +31,7 @@ public class ChatController {
     }
     @RequestMapping("/chat1")
     public String chat1(Model model) {
-        model.addAttribute("websocketurl",websocketurl);
+        model.addAttribute("websocketurl",webSocketUrl);
         model.addAttribute("center",dir+"chat1");
         model.addAttribute("left",dir+"left");
         return "index";
@@ -39,7 +39,7 @@ public class ChatController {
 
     @RequestMapping("/chat2")
     public String chat2(Model model) {
-        model.addAttribute("websocketurl",websocketurl);
+        model.addAttribute("websocketurl",webSocketUrl);
         model.addAttribute("center",dir+"chat2");
         model.addAttribute("left",dir+"left");
         return "index";
@@ -47,8 +47,16 @@ public class ChatController {
 
     @RequestMapping("/chat3")
     public String chat3(Model model) {
-        model.addAttribute("websocketurl",websocketurl);
+        model.addAttribute("websocketurl",webSocketUrl);
         model.addAttribute("center",dir+"chat3");
+        model.addAttribute("left",dir+"left");
+        return "index";
+    }
+
+    @RequestMapping("/chat4")
+    public String chat4(Model model) {
+        model.addAttribute("websocketurl",webSocketUrl);
+        model.addAttribute("center",dir+"chat4");
         model.addAttribute("left",dir+"left");
         return "index";
     }

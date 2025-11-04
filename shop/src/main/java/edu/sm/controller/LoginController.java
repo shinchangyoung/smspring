@@ -12,6 +12,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+
 @Controller
 @Slf4j
 @RequiredArgsConstructor
@@ -20,6 +26,9 @@ public class LoginController {
     final CustService custService;
     final BCryptPasswordEncoder bCryptPasswordEncoder;
     final StandardPBEStringEncryptor standardPBEStringEncryptor;
+    
+    // 로그인 카운트용 별도 logger
+    private static final org.slf4j.Logger loginCountLogger = org.slf4j.LoggerFactory.getLogger("edu.sm.controller.LoginCountLogger");
 
     @RequestMapping("/updatepwd")
     public String updatepwd(Model model) {
@@ -78,7 +87,24 @@ public class LoginController {
         Cust dbCust = custService.get(id);
         if(dbCust != null && bCryptPasswordEncoder.matches(pwd, dbCust.getCustPwd())){
             httpSession.setAttribute("cust",dbCust);
+            // login.log에 사용자 정보 기록
             log.info(dbCust.getCustId()+","+dbCust.getCustName());
+            
+            // logincount.log에 카운트 기록
+            try {
+                Path countLogPath = Paths.get("C:/smspring/logs/logincount.log");
+                int loginCount = 0;
+                if (Files.exists(countLogPath)) {
+                    List<String> lines = Files.readAllLines(countLogPath);
+                    // 빈 줄 제외한 실제 로그 라인 수 계산
+                    loginCount = (int) lines.stream().filter(line -> !line.trim().isEmpty()).count();
+                }
+                // 다음 카운트 값을 기록
+                loginCountLogger.info(String.valueOf(loginCount + 1));
+            } catch (IOException e) {
+                loginCountLogger.info("1");
+                e.printStackTrace();  // 디버깅용
+            }
             return "redirect:/";
         }
         model.addAttribute("center","login");
