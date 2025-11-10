@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.sm.product.SearchTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-27T11:10:56.138Z" hostname="DESKTOP-VB1250F" time="0.011">
+  <properties/>
+  <testcase name="카테고리 ID로 상품 검색 테스트" classname="edu.sm.product.SearchTest" time="0.011"/>
+  <system-out><![CDATA[[10-27 20:10:56] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [edu.sm.product.SearchTest]: SearchTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[10-27 20:10:56] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration edu.sm.ShopApplication for test class edu.sm.product.SearchTest
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

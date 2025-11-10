@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.sm.cust.SelectTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-27T11:10:55.854Z" hostname="DESKTOP-VB1250F" time="0.04">
+  <properties/>
+  <testcase name="contextLoads()" classname="edu.sm.cust.SelectTests" time="0.04"/>
+  <system-out><![CDATA[[10-27 20:10:55] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [edu.sm.cust.SelectTests]: SelectTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[10-27 20:10:55] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration edu.sm.ShopApplication for test class edu.sm.cust.SelectTests
+[10-27 20:10:55] INFO  edu.sm.cust.SelectTests - id30,tiyi,2123,2025-09-29T20:33:21.305532,2025-09-29T20:33:21.305532
+[10-27 20:10:55] INFO  edu.sm.cust.SelectTests - id30,tiyi,2123,2025년 09월 29일 20시 33분 21초,2025년 09월 29일 20시 33분 21초
+[10-27 20:10:55] INFO  edu.sm.cust.SelectTests - id07,신기철,강원도 철원,2025-10-10T14:04:52.079619,2025-10-10T14:04:52.079619
+[10-27 20:10:55] INFO  edu.sm.cust.SelectTests - id07,신기철,강원도 철원,2025년 10월 10일 14시 04분 52초,2025년 10월 10일 14시 04분 52초
+[10-27 20:10:55] INFO  edu.sm.cust.SelectTests - id31,1,1,2025-10-12T16:12:00.840108,2025-10-12T16:12:00.840108
+[10-27 20:10:55] INFO  edu.sm.cust.SelectTests - id31,1,1,2025년 10월 12일 16시 12분 00초,2025년 10월 12일 16시 12분 00초
+[10-27 20:10:55] INFO  edu.sm.cust.SelectTests - 1,1,1,2025-10-14T10:54:01.681151,2025-10-14T10:54:01.681151
+[10-27 20:10:55] INFO  edu.sm.cust.SelectTests - 1,1,1,2025년 10월 14일 10시 54분 01초,2025년 10월 14일 10시 54분 01초
+[10-27 20:10:55] INFO  edu.sm.cust.SelectTests - id01,이말숙,충청도 아산시,2025-10-15T21:38:42.145004,2025-10-15T21:38:42.145004
+[10-27 20:10:55] INFO  edu.sm.cust.SelectTests - id01,이말숙,충청도 아산시,2025년 10월 15일 21시 38분 42초,2025년 10월 15일 21시 38분 42초
+[10-27 20:10:55] INFO  edu.sm.cust.SelectTests - id111,이말숙,충청도 아산시,2025-10-23T19:43:27.163924,2025-10-23T19:43:27.163924
+[10-27 20:10:55] INFO  edu.sm.cust.SelectTests - id111,이말숙,충청도 아산시,2025년 10월 23일 19시 43분 27초,2025년 10월 23일 19시 43분 27초
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

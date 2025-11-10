@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.sm.wather.Wheather2Tests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-27T11:10:56.566Z" hostname="DESKTOP-VB1250F" time="0.747">
+  <properties/>
+  <testcase name="contextLoads()" classname="edu.sm.wather.Wheather2Tests" time="0.747"/>
+  <system-out><![CDATA[[10-27 20:10:56] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [edu.sm.wather.Wheather2Tests]: Wheather2Tests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[10-27 20:10:56] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration edu.sm.ShopApplication for test class edu.sm.wather.Wheather2Tests
+[10-27 20:10:57] INFO  edu.sm.wather.Wheather2Tests - {"cod":401,"message":"Invalid API key. Please see https:\/\/openweathermap.org\/faq#error401 for more info."}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

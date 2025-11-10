@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.sm.cust.InsertTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-10-27T11:10:55.055Z" hostname="DESKTOP-VB1250F" time="0.707">
+  <properties/>
+  <testcase name="contextLoads()" classname="edu.sm.cust.InsertTests" time="0.707">
+    <failure message="org.springframework.dao.DuplicateKeyException: &#13;&#10;### Error updating database.  Cause: org.postgresql.util.PSQLException: 오류: 중복된 키 값이 &quot;cust_pkey&quot; 고유 제약 조건을 위반함&#10;  Detail: (cust_id)=(id01) 키가 이미 있습니다.&#13;&#10;### The error may exist in file [C:\smspring\shop\build\resources\main\mapper\Custmapper.xml]&#13;&#10;### The error may involve edu.sm.app.repository.CustRepository.insert-Inline&#13;&#10;### The error occurred while setting parameters&#13;&#10;### SQL: INSERT INTO cust         VALUES (?, ?, ?, ?, NOW(), NOW())&#13;&#10;### Cause: org.postgresql.util.PSQLException: 오류: 중복된 키 값이 &quot;cust_pkey&quot; 고유 제약 조건을 위반함&#10;  Detail: (cust_id)=(id01) 키가 이미 있습니다.&#10;; 오류: 중복된 키 값이 &quot;cust_pkey&quot; 고유 제약 조건을 위반함&#10;  Detail: (cust_id)=(id01) 키가 이미 있습니다." type="org.springframework.dao.DuplicateKeyException">org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: org.postgresql.util.PSQLException: 오류: 중복된 키 값이 &quot;cust_pkey&quot; 고유 제약 조건을 위반함
+  Detail: (cust_id)=(id01) 키가 이미 있습니다.
+### The error may exist in file [C:\smspring\shop\build\resources\main\mapper\Custmapper.xml]
+### The error may involve edu.sm.app.repository.CustRepository.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO cust         VALUES (?, ?, ?, ?, NOW(), NOW())
+### Cause: org.postgresql.util.PSQLException: 오류: 중복된 키 값이 &quot;cust_pkey&quot; 고유 제약 조건을 위반함
+  Detail: (cust_id)=(id01) 키가 이미 있습니다.
+; 오류: 중복된 키 값이 &quot;cust_pkey&quot; 고유 제약 조건을 위반함
+  Detail: (cust_id)=(id01) 키가 이미 있습니다.
+	at app//org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:254)
+	at app//org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107)
+	at app//org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at app//org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at app/jdk.proxy3/jdk.proxy3.$Proxy83.insert(Unknown Source)
+	at app//org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at app//org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at app//org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at app//org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at app/jdk.proxy3/jdk.proxy3.$Proxy87.insert(Unknown Source)
+	at java.base@17.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.15/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.15/java.lang.reflect.Method.invoke(Method.java:568)
+	at app//org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at app//org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at app//org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at app//org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at app//org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at app//org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at app/jdk.proxy3/jdk.proxy3.$Proxy88.insert(Unknown Source)
+	at app//edu.sm.app.service.CustService.register(CustService.java:23)
+	at java.base@17.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.15/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.15/java.lang.reflect.Method.invoke(Method.java:568)
+	at app//org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at app//org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at app//org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at app//org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at app//org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at app//org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at app//org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at app//edu.sm.app.service.CustService$$SpringCGLIB$$0.register(&lt;generated&gt;)
+	at app//edu.sm.cust.InsertTests.contextLoads(InsertTests.java:37)
+	at java.base@17.0.15/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base@17.0.15/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.15/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.postgresql.util.PSQLException: 오류: 중복된 키 값이 &quot;cust_pkey&quot; 고유 제약 조건을 위반함
+  Detail: (cust_id)=(id01) 키가 이미 있습니다.
+	at app//org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2734)
+	at app//org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2421)
+	at app//org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372)
+	at app//org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
+	at app//org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+	at app//org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at app//org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:182)
+	at app//com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at app//com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at app//org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48)
+	at app//org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75)
+	at app//org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at app//org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at app//org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at java.base@17.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.15/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.15/java.lang.reflect.Method.invoke(Method.java:568)
+	at app//org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at app/jdk.proxy3/jdk.proxy3.$Proxy164.update(Unknown Source)
+	at app//org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at app//org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base@17.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.15/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.15/java.lang.reflect.Method.invoke(Method.java:568)
+	at app//org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 34 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[[10-27 20:10:55] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [edu.sm.cust.InsertTests]: InsertTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[10-27 20:10:55] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration edu.sm.ShopApplication for test class edu.sm.cust.InsertTests
+[10-27 20:10:55] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[10-27 20:10:55] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@579ee82
+[10-27 20:10:55] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+]]></system-out>
+  <system-err><![CDATA[Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+]]></system-err>
+</testsuite>

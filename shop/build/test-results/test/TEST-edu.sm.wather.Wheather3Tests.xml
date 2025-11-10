@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.sm.wather.Wheather3Tests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-27T11:10:57.321Z" hostname="DESKTOP-VB1250F" time="0.145">
+  <properties/>
+  <testcase name="contextLoads()" classname="edu.sm.wather.Wheather3Tests" time="0.145"/>
+  <system-out><![CDATA[[10-27 20:10:57] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [edu.sm.wather.Wheather3Tests]: Wheather3Tests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[10-27 20:10:57] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration edu.sm.ShopApplication for test class edu.sm.wather.Wheather3Tests
+[10-27 20:10:57] INFO  edu.sm.wather.Wheather3Tests - {"visibility":10000,"timezone":32400,"main":{"temp":10.74,"temp_min":10.74,"grnd_level":1018,"humidity":45,"pressure":1023,"sea_level":1023,"feels_like":9.04,"temp_max":10.74},"clouds":{"all":10},"sys":{"country":"KR","sunrise":1761514795,"sunset":1761554119},"dt":1761563367,"coord":{"lon":129.0403,"lat":35.1028},"weather":[{"icon":"01n","description":"留묒쓬","main":"Clear","id":800}],"name":"Busan","cod":200,"id":1838524,"base":"stations","wind":{"deg":335,"speed":4.92,"gust":7.96}}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

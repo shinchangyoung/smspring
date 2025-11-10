@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.sm.security.SecurityTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-27T11:10:56.166Z" hostname="DESKTOP-VB1250F" time="0.192">
+  <properties/>
+  <testcase name="contestLoads()" classname="edu.sm.security.SecurityTest" time="0.192"/>
+  <system-out><![CDATA[[10-27 20:10:56] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [edu.sm.security.SecurityTest]: SecurityTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[10-27 20:10:56] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration edu.sm.ShopApplication for test class edu.sm.security.SecurityTest
+[10-27 20:10:56] INFO  edu.sm.security.SecurityTest - pwd: 111111
+[10-27 20:10:56] INFO  edu.sm.security.SecurityTest - encPwd: $2a$10$vuCY21fjGDAekV4phg4pe.X/feK5g.BeciJvrKuDGcEznfRfjO3e2
+[10-27 20:10:56] INFO  edu.sm.security.SecurityTest - matches:true
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

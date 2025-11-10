@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.sm.CspplicationTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-10-27T11:10:53.535Z" hostname="DESKTOP-VB1250F" time="1.47">
+  <properties/>
+  <testcase name="contextLoads()" classname="edu.sm.CspplicationTests" time="1.47">
+    <failure message="java.io.FileNotFoundException: C:\smspring\logs\click\click.log (지정된 경로를 찾을 수 없습니다)" type="java.io.FileNotFoundException">java.io.FileNotFoundException: C:\smspring\logs\click\click.log (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)
+	at edu.sm.CspplicationTests.contextLoads(CspplicationTests.java:22)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <system-out><![CDATA[Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+20:10:47,639 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.5.18
+20:10:47,642 |-INFO in ch.qos.logback.classic.util.ContextInitializer@43b4fe19 - Here is a list of configurators discovered as a service, by rank: 
+20:10:47,642 |-INFO in ch.qos.logback.classic.util.ContextInitializer@43b4fe19 -   org.springframework.boot.logging.logback.RootLogLevelConfigurator
+20:10:47,642 |-INFO in ch.qos.logback.classic.util.ContextInitializer@43b4fe19 - They will be invoked in order until ExecutionStatus.DO_NOT_INVOKE_NEXT_IF_ANY is returned.
+20:10:47,642 |-INFO in ch.qos.logback.classic.util.ContextInitializer@43b4fe19 - Constructed configurator of type class org.springframework.boot.logging.logback.RootLogLevelConfigurator
+20:10:47,649 |-INFO in ch.qos.logback.classic.util.ContextInitializer@43b4fe19 - org.springframework.boot.logging.logback.RootLogLevelConfigurator.configure() call lasted 1 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+20:10:47,649 |-INFO in ch.qos.logback.classic.util.ContextInitializer@43b4fe19 - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+20:10:47,650 |-INFO in ch.qos.logback.classic.util.ContextInitializer@43b4fe19 - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+20:10:47,651 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+20:10:47,652 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+20:10:47,652 |-INFO in ch.qos.logback.classic.util.ContextInitializer@43b4fe19 - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 2 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+20:10:47,652 |-INFO in ch.qos.logback.classic.util.ContextInitializer@43b4fe19 - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+20:10:47,652 |-INFO in ch.qos.logback.classic.util.ContextInitializer@43b4fe19 - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+20:10:47,653 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+20:10:47,655 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/smspring/shop/build/resources/main/logback.xml]
+20:10:47,820 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@25ddbbbb - value "C:/smspring/logs/" substituted for "${logdir}"
+20:10:47,832 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [STDOUT]
+20:10:47,832 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+20:10:47,960 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+20:10:47,960 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+20:10:47,960 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - See also https://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+20:10:47,960 |-INFO in ch.qos.logback.core.ConsoleAppender[STDOUT] - BEWARE: Writing to the console can be very slow. Avoid logging to the 
+20:10:47,960 |-INFO in ch.qos.logback.core.ConsoleAppender[STDOUT] - console in production environments, especially in high volume systems.
+20:10:47,960 |-INFO in ch.qos.logback.core.ConsoleAppender[STDOUT] - See also https://logback.qos.ch/codes.html#slowConsole
+20:10:47,960 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE]
+20:10:47,960 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+20:10:47,980 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@25ddbbbb - value "C:/smspring/logs//logback.log" substituted for "${LOGS_DIR}/logback.log"
+20:10:47,987 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:10:47,994 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@25ddbbbb - value "C:/smspring/logs//logback.%d{yyyy-MM-dd}.%i.log.gz" substituted for "${LOGS_DIR}/logback.%d{yyyy-MM-dd}.%i.log.gz"
+20:10:48,001 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@355885103 - Will use gz compression
+20:10:48,024 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@355885103 - Will use the pattern C:/smspring/logs//logback.%d{yyyy-MM-dd}.%i.log for the active file
+20:10:48,024 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4ebea12c - SizeAndTimeBasedFNATP class was renamed as SizeAndTimeBasedFileNamingAndTriggeringPolicy.
+20:10:48,029 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4ebea12c - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/smspring/logs//logback.%d{yyyy-MM-dd}.%i.log.gz'.
+20:10:48,029 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4ebea12c - Roll-over at midnight.
+20:10:48,030 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4ebea12c - Setting initial period to 2025-10-27T11:10:47.760Z
+20:10:48,030 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4ebea12c - Direct use of either SizeAndTimeBasedFNATP or SizeAndTimeBasedFileNamingAndTriggeringPolicy 
+20:10:48,030 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4ebea12c - is deprecated. Please use SizeAndTimeBasedRollingPolicy instead.
+20:10:48,030 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4ebea12c - For more information see https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+20:10:48,040 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: C:/smspring/logs//logback.log
+20:10:48,045 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Setting currentFileLength to 3742019 for C:\smspring\logs\logback.log
+20:10:48,047 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [C:/smspring/logs//logback.log]
+20:10:48,048 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE2]
+20:10:48,048 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+20:10:48,048 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@25ddbbbb - value "C:/smspring/logs//maininfo.log" substituted for "${LOGS_DIR}/maininfo.log"
+20:10:48,048 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:10:48,049 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@25ddbbbb - value "C:/smspring/logs//maininfo.%d{yyyy-MM-dd}.%i.log.gz" substituted for "${LOGS_DIR}/maininfo.%d{yyyy-MM-dd}.%i.log.gz"
+20:10:48,049 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@706665172 - Will use gz compression
+20:10:48,050 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@706665172 - Will use the pattern C:/smspring/logs//maininfo.%d{yyyy-MM-dd}.%i.log for the active file
+20:10:48,050 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@6256ac4f - SizeAndTimeBasedFNATP class was renamed as SizeAndTimeBasedFileNamingAndTriggeringPolicy.
+20:10:48,050 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@6256ac4f - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/smspring/logs//maininfo.%d{yyyy-MM-dd}.%i.log.gz'.
+20:10:48,050 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@6256ac4f - Roll-over at midnight.
+20:10:48,051 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@6256ac4f - Setting initial period to 2025-09-23T07:51:20.557Z
+20:10:48,051 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@6256ac4f - Direct use of either SizeAndTimeBasedFNATP or SizeAndTimeBasedFileNamingAndTriggeringPolicy 
+20:10:48,051 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@6256ac4f - is deprecated. Please use SizeAndTimeBasedRollingPolicy instead.
+20:10:48,051 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@6256ac4f - For more information see https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+20:10:48,052 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE2] - Active log file name: C:/smspring/logs//maininfo.log
+20:10:48,052 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE2] - Setting currentFileLength to 31985 for C:\smspring\logs\maininfo.log
+20:10:48,052 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE2] - File property is set to [C:/smspring/logs//maininfo.log]
+20:10:48,052 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [ADMINDATAFILE1]
+20:10:48,052 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+20:10:48,052 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@25ddbbbb - value "C:/smspring/logs//maininfo1.log" substituted for "${LOGS_DIR}/maininfo1.log"
+20:10:48,054 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:10:48,054 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@25ddbbbb - value "C:/smspring/logs//maininfo1.%d{yyyy-MM-dd}.%i.log.gz" substituted for "${LOGS_DIR}/maininfo1.%d{yyyy-MM-dd}.%i.log.gz"
+20:10:48,056 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1153933106 - Will use gz compression
+20:10:48,056 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1153933106 - Will use the pattern C:/smspring/logs//maininfo1.%d{yyyy-MM-dd}.%i.log for the active file
+20:10:48,056 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7fcbe147 - SizeAndTimeBasedFNATP class was renamed as SizeAndTimeBasedFileNamingAndTriggeringPolicy.
+20:10:48,056 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7fcbe147 - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/smspring/logs//maininfo1.%d{yyyy-MM-dd}.%i.log.gz'.
+20:10:48,056 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7fcbe147 - Roll-over at midnight.
+20:10:48,057 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7fcbe147 - Setting initial period to 2025-10-27T08:50:26.414Z
+20:10:48,057 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7fcbe147 - Direct use of either SizeAndTimeBasedFNATP or SizeAndTimeBasedFileNamingAndTriggeringPolicy 
+20:10:48,057 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7fcbe147 - is deprecated. Please use SizeAndTimeBasedRollingPolicy instead.
+20:10:48,057 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7fcbe147 - For more information see https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+20:10:48,059 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE1] - Active log file name: C:/smspring/logs//maininfo1.log
+20:10:48,059 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE1] - Setting currentFileLength to 199 for C:\smspring\logs\maininfo1.log
+20:10:48,059 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE1] - File property is set to [C:/smspring/logs//maininfo1.log]
+20:10:48,059 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [ADMINDATAFILE2]
+20:10:48,059 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+20:10:48,060 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@25ddbbbb - value "C:/smspring/logs//maininfo2.log" substituted for "${LOGS_DIR}/maininfo2.log"
+20:10:48,060 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:10:48,061 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@25ddbbbb - value "C:/smspring/logs//maininfo2.%d{yyyy-MM-dd}.%i.log.gz" substituted for "${LOGS_DIR}/maininfo2.%d{yyyy-MM-dd}.%i.log.gz"
+20:10:48,061 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@593447952 - Will use gz compression
+20:10:48,061 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@593447952 - Will use the pattern C:/smspring/logs//maininfo2.%d{yyyy-MM-dd}.%i.log for the active file
+20:10:48,061 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@743cb8e0 - SizeAndTimeBasedFNATP class was renamed as SizeAndTimeBasedFileNamingAndTriggeringPolicy.
+20:10:48,062 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@743cb8e0 - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/smspring/logs//maininfo2.%d{yyyy-MM-dd}.%i.log.gz'.
+20:10:48,062 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@743cb8e0 - Roll-over at midnight.
+20:10:48,063 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@743cb8e0 - Setting initial period to 2025-09-25T01:47:49.050Z
+20:10:48,063 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@743cb8e0 - Direct use of either SizeAndTimeBasedFNATP or SizeAndTimeBasedFileNamingAndTriggeringPolicy 
+20:10:48,063 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@743cb8e0 - is deprecated. Please use SizeAndTimeBasedRollingPolicy instead.
+20:10:48,063 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@743cb8e0 - For more information see https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+20:10:48,063 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE2] - Active log file name: C:/smspring/logs//maininfo2.log
+20:10:48,064 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE2] - Setting currentFileLength to 2491 for C:\smspring\logs\maininfo2.log
+20:10:48,064 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE2] - File property is set to [C:/smspring/logs//maininfo2.log]
+20:10:48,064 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [ADMINDATAFILE3]
+20:10:48,064 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+20:10:48,064 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@25ddbbbb - value "C:/smspring/logs//maininfo3.log" substituted for "${LOGS_DIR}/maininfo3.log"
+20:10:48,064 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:10:48,065 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@25ddbbbb - value "C:/smspring/logs//maininfo3.%d{yyyy-MM-dd}.%i.log.gz" substituted for "${LOGS_DIR}/maininfo3.%d{yyyy-MM-dd}.%i.log.gz"
+20:10:48,065 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@209360730 - Will use gz compression
+20:10:48,066 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@209360730 - Will use the pattern C:/smspring/logs//maininfo3.%d{yyyy-MM-dd}.%i.log for the active file
+20:10:48,066 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@2c1b9e4b - SizeAndTimeBasedFNATP class was renamed as SizeAndTimeBasedFileNamingAndTriggeringPolicy.
+20:10:48,066 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@2c1b9e4b - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/smspring/logs//maininfo3.%d{yyyy-MM-dd}.%i.log.gz'.
+20:10:48,066 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@2c1b9e4b - Roll-over at midnight.
+20:10:48,067 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@2c1b9e4b - Setting initial period to 2025-09-24T10:50:29.289Z
+20:10:48,067 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@2c1b9e4b - Direct use of either SizeAndTimeBasedFNATP or SizeAndTimeBasedFileNamingAndTriggeringPolicy 
+20:10:48,067 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@2c1b9e4b - is deprecated. Please use SizeAndTimeBasedRollingPolicy instead.
+20:10:48,067 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@2c1b9e4b - For more information see https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+20:10:48,068 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE3] - Active log file name: C:/smspring/logs//maininfo3.log
+20:10:48,068 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE3] - Setting currentFileLength to 498 for C:\smspring\logs\maininfo3.log
+20:10:48,068 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE3] - File property is set to [C:/smspring/logs//maininfo3.log]
+20:10:48,068 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [ADMINDATAFILE4]
+20:10:48,068 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+20:10:48,068 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@25ddbbbb - value "C:/smspring/logs//maininfo4.log" substituted for "${LOGS_DIR}/maininfo4.log"
+20:10:48,069 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:10:48,069 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@25ddbbbb - value "C:/smspring/logs//maininfo4.%d{yyyy-MM-dd}.%i.log.gz" substituted for "${LOGS_DIR}/maininfo4.%d{yyyy-MM-dd}.%i.log.gz"
+20:10:48,070 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1971152916 - Will use gz compression
+20:10:48,070 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1971152916 - Will use the pattern C:/smspring/logs//maininfo4.%d{yyyy-MM-dd}.%i.log for the active file
+20:10:48,070 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@649725e3 - SizeAndTimeBasedFNATP class was renamed as SizeAndTimeBasedFileNamingAndTriggeringPolicy.
+20:10:48,071 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@649725e3 - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/smspring/logs//maininfo4.%d{yyyy-MM-dd}.%i.log.gz'.
+20:10:48,071 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@649725e3 - Roll-over at midnight.
+20:10:48,071 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@649725e3 - Setting initial period to 2025-09-25T01:50:58.639Z
+20:10:48,071 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@649725e3 - Direct use of either SizeAndTimeBasedFNATP or SizeAndTimeBasedFileNamingAndTriggeringPolicy 
+20:10:48,071 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@649725e3 - is deprecated. Please use SizeAndTimeBasedRollingPolicy instead.
+20:10:48,071 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@649725e3 - For more information see https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+20:10:48,076 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE4] - Active log file name: C:/smspring/logs//maininfo4.log
+20:10:48,076 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE4] - Setting currentFileLength to 2496 for C:\smspring\logs\maininfo4.log
+20:10:48,076 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE4] - File property is set to [C:/smspring/logs//maininfo4.log]
+20:10:48,077 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [LOGIN]
+20:10:48,077 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+20:10:48,077 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@25ddbbbb - value "C:/smspring/logs//login.log" substituted for "${LOGS_DIR}/login.log"
+20:10:48,077 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:10:48,078 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@25ddbbbb - value "C:/smspring/logs//login.%d{yyyy-MM-dd}.%i.log.gz" substituted for "${LOGS_DIR}/login.%d{yyyy-MM-dd}.%i.log.gz"
+20:10:48,078 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1007660652 - Will use gz compression
+20:10:48,078 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1007660652 - Will use the pattern C:/smspring/logs//login.%d{yyyy-MM-dd}.%i.log for the active file
+20:10:48,078 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4c168660 - SizeAndTimeBasedFNATP class was renamed as SizeAndTimeBasedFileNamingAndTriggeringPolicy.
+20:10:48,079 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4c168660 - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/smspring/logs//login.%d{yyyy-MM-dd}.%i.log.gz'.
+20:10:48,079 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4c168660 - Roll-over at midnight.
+20:10:48,079 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4c168660 - Setting initial period to 2025-10-27T11:07:50.594Z
+20:10:48,079 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4c168660 - Direct use of either SizeAndTimeBasedFNATP or SizeAndTimeBasedFileNamingAndTriggeringPolicy 
+20:10:48,079 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4c168660 - is deprecated. Please use SizeAndTimeBasedRollingPolicy instead.
+20:10:48,079 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4c168660 - For more information see https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+20:10:48,081 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[LOGIN] - Active log file name: C:/smspring/logs//login.log
+20:10:48,081 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[LOGIN] - Setting currentFileLength to 2503 for C:\smspring\logs\login.log
+20:10:48,081 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[LOGIN] - File property is set to [C:/smspring/logs//login.log]
+20:10:48,082 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CLICK]
+20:10:48,082 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+20:10:48,082 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@25ddbbbb - value "C:/smspring/logs//click.log" substituted for "${LOGS_DIR}/click.log"
+20:10:48,082 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:10:48,083 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@25ddbbbb - value "C:/smspring/logs//click.%d{yyyy-MM-dd}.%i.log.gz" substituted for "${LOGS_DIR}/click.%d{yyyy-MM-dd}.%i.log.gz"
+20:10:48,083 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1387620926 - Will use gz compression
+20:10:48,084 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1387620926 - Will use the pattern C:/smspring/logs//click.%d{yyyy-MM-dd}.%i.log for the active file
+20:10:48,084 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@fd0e5b6 - SizeAndTimeBasedFNATP class was renamed as SizeAndTimeBasedFileNamingAndTriggeringPolicy.
+20:10:48,084 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@fd0e5b6 - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/smspring/logs//click.%d{yyyy-MM-dd}.%i.log.gz'.
+20:10:48,084 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@fd0e5b6 - Roll-over at midnight.
+20:10:48,085 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@fd0e5b6 - Setting initial period to 2025-09-29T04:28:59.449Z
+20:10:48,085 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@fd0e5b6 - Direct use of either SizeAndTimeBasedFNATP or SizeAndTimeBasedFileNamingAndTriggeringPolicy 
+20:10:48,085 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@fd0e5b6 - is deprecated. Please use SizeAndTimeBasedRollingPolicy instead.
+20:10:48,085 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@fd0e5b6 - For more information see https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+20:10:48,086 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[CLICK] - Active log file name: C:/smspring/logs//click.log
+20:10:48,086 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[CLICK] - Setting currentFileLength to 75 for C:\smspring\logs\click.log
+20:10:48,086 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[CLICK] - File property is set to [C:/smspring/logs//click.log]
+20:10:48,087 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.springframework.web] to DEBUG
+20:10:48,088 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [STDOUT] to Logger[org.springframework.web]
+20:10:48,089 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[org.springframework.web]
+20:10:48,089 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [edu.sm.controller.MainRestController] to INFO
+20:10:48,089 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE2] to Logger[edu.sm.controller.MainRestController]
+20:10:48,089 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [edu.sm.app.service.LogoService1] to INFO
+20:10:48,089 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [ADMINDATAFILE1] to Logger[edu.sm.app.service.LogoService1]
+20:10:48,089 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [edu.sm.app.service.LogoService2] to INFO
+20:10:48,089 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [ADMINDATAFILE2] to Logger[edu.sm.app.service.LogoService2]
+20:10:48,089 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [edu.sm.app.service.LogoService3] to INFO
+20:10:48,089 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [ADMINDATAFILE3] to Logger[edu.sm.app.service.LogoService3]
+20:10:48,089 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [edu.sm.app.service.LogoService4] to INFO
+20:10:48,089 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [ADMINDATAFILE4] to Logger[edu.sm.app.service.LogoService4]
+20:10:48,089 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [edu.sm.controller.LoginController] to INFO
+20:10:48,089 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [LOGIN] to Logger[edu.sm.controller.LoginController]
+20:10:48,089 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [edu.sm.controller.ProductController] to INFO
+20:10:48,089 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CLICK] to Logger[edu.sm.controller.ProductController]
+20:10:48,089 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+20:10:48,091 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [STDOUT] to Logger[ROOT]
+20:10:48,091 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc] to OFF
+20:10:48,091 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.sqlonly] to INFO
+20:10:48,092 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.sqltiming] to OFF
+20:10:48,092 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.audit] to OFF
+20:10:48,093 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.resultset] to OFF
+20:10:48,093 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.resultsettable] to INFO
+20:10:48,093 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.connection] to OFF
+20:10:48,093 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@4eed46ee - End of configuration.
+20:10:48,094 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@36b0fcd5 - Registering current configuration as safe fallback point
+20:10:48,094 |-INFO in ch.qos.logback.classic.util.ContextInitializer@43b4fe19 - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 442 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+
+[10-27 20:10:48] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [edu.sm.CspplicationTests]: CspplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[10-27 20:10:48] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration edu.sm.ShopApplication for test class edu.sm.CspplicationTests
+20:10:49,102 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@77eb5790 - value "C:/smspring/logs/" substituted for "${logdir}"
+20:10:49,102 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [STDOUT]
+20:10:49,102 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+20:10:49,103 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+20:10:49,103 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+20:10:49,103 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - See also https://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+20:10:49,103 |-INFO in ch.qos.logback.core.ConsoleAppender[STDOUT] - BEWARE: Writing to the console can be very slow. Avoid logging to the 
+20:10:49,103 |-INFO in ch.qos.logback.core.ConsoleAppender[STDOUT] - console in production environments, especially in high volume systems.
+20:10:49,103 |-INFO in ch.qos.logback.core.ConsoleAppender[STDOUT] - See also https://logback.qos.ch/codes.html#slowConsole
+20:10:49,103 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE]
+20:10:49,103 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+20:10:49,103 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@77eb5790 - value "C:/smspring/logs//logback.log" substituted for "${LOGS_DIR}/logback.log"
+20:10:49,103 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:10:49,104 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@77eb5790 - value "C:/smspring/logs//logback.%d{yyyy-MM-dd}.%i.log.gz" substituted for "${LOGS_DIR}/logback.%d{yyyy-MM-dd}.%i.log.gz"
+20:10:49,104 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1760020675 - Will use gz compression
+20:10:49,104 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1760020675 - Will use the pattern C:/smspring/logs//logback.%d{yyyy-MM-dd}.%i.log for the active file
+20:10:49,104 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@319c3a25 - SizeAndTimeBasedFNATP class was renamed as SizeAndTimeBasedFileNamingAndTriggeringPolicy.
+20:10:49,105 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@319c3a25 - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/smspring/logs//logback.%d{yyyy-MM-dd}.%i.log.gz'.
+20:10:49,105 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@319c3a25 - Roll-over at midnight.
+20:10:49,105 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@319c3a25 - Setting initial period to 2025-10-27T11:10:48.598Z
+20:10:49,105 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@319c3a25 - Direct use of either SizeAndTimeBasedFNATP or SizeAndTimeBasedFileNamingAndTriggeringPolicy 
+20:10:49,105 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@319c3a25 - is deprecated. Please use SizeAndTimeBasedRollingPolicy instead.
+20:10:49,105 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@319c3a25 - For more information see https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+20:10:49,106 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: C:/smspring/logs//logback.log
+20:10:49,106 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Setting currentFileLength to 3751018 for C:\smspring\logs\logback.log
+20:10:49,106 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [C:/smspring/logs//logback.log]
+20:10:49,106 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE2]
+20:10:49,106 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+20:10:49,106 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@77eb5790 - value "C:/smspring/logs//maininfo.log" substituted for "${LOGS_DIR}/maininfo.log"
+20:10:49,107 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:10:49,107 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@77eb5790 - value "C:/smspring/logs//maininfo.%d{yyyy-MM-dd}.%i.log.gz" substituted for "${LOGS_DIR}/maininfo.%d{yyyy-MM-dd}.%i.log.gz"
+20:10:49,108 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@596376940 - Will use gz compression
+20:10:49,108 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@596376940 - Will use the pattern C:/smspring/logs//maininfo.%d{yyyy-MM-dd}.%i.log for the active file
+20:10:49,108 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@ef1695a - SizeAndTimeBasedFNATP class was renamed as SizeAndTimeBasedFileNamingAndTriggeringPolicy.
+20:10:49,109 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@ef1695a - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/smspring/logs//maininfo.%d{yyyy-MM-dd}.%i.log.gz'.
+20:10:49,109 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@ef1695a - Roll-over at midnight.
+20:10:49,109 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@ef1695a - Setting initial period to 2025-09-23T07:51:20.557Z
+20:10:49,109 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@ef1695a - Direct use of either SizeAndTimeBasedFNATP or SizeAndTimeBasedFileNamingAndTriggeringPolicy 
+20:10:49,109 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@ef1695a - is deprecated. Please use SizeAndTimeBasedRollingPolicy instead.
+20:10:49,109 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@ef1695a - For more information see https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+20:10:49,110 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE2] - Active log file name: C:/smspring/logs//maininfo.log
+20:10:49,110 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE2] - Setting currentFileLength to 31985 for C:\smspring\logs\maininfo.log
+20:10:49,110 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE2] - File property is set to [C:/smspring/logs//maininfo.log]
+20:10:49,110 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [ADMINDATAFILE1]
+20:10:49,110 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+20:10:49,110 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@77eb5790 - value "C:/smspring/logs//maininfo1.log" substituted for "${LOGS_DIR}/maininfo1.log"
+20:10:49,110 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:10:49,111 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@77eb5790 - value "C:/smspring/logs//maininfo1.%d{yyyy-MM-dd}.%i.log.gz" substituted for "${LOGS_DIR}/maininfo1.%d{yyyy-MM-dd}.%i.log.gz"
+20:10:49,111 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1485179287 - Will use gz compression
+20:10:49,111 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1485179287 - Will use the pattern C:/smspring/logs//maininfo1.%d{yyyy-MM-dd}.%i.log for the active file
+20:10:49,111 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@81b5db0 - SizeAndTimeBasedFNATP class was renamed as SizeAndTimeBasedFileNamingAndTriggeringPolicy.
+20:10:49,111 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@81b5db0 - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/smspring/logs//maininfo1.%d{yyyy-MM-dd}.%i.log.gz'.
+20:10:49,111 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@81b5db0 - Roll-over at midnight.
+20:10:49,112 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@81b5db0 - Setting initial period to 2025-10-27T08:50:26.414Z
+20:10:49,112 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@81b5db0 - Direct use of either SizeAndTimeBasedFNATP or SizeAndTimeBasedFileNamingAndTriggeringPolicy 
+20:10:49,112 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@81b5db0 - is deprecated. Please use SizeAndTimeBasedRollingPolicy instead.
+20:10:49,112 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@81b5db0 - For more information see https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+20:10:49,112 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE1] - Active log file name: C:/smspring/logs//maininfo1.log
+20:10:49,112 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE1] - Setting currentFileLength to 199 for C:\smspring\logs\maininfo1.log
+20:10:49,112 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE1] - File property is set to [C:/smspring/logs//maininfo1.log]
+20:10:49,112 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [ADMINDATAFILE2]
+20:10:49,112 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+20:10:49,112 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@77eb5790 - value "C:/smspring/logs//maininfo2.log" substituted for "${LOGS_DIR}/maininfo2.log"
+20:10:49,112 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:10:49,113 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@77eb5790 - value "C:/smspring/logs//maininfo2.%d{yyyy-MM-dd}.%i.log.gz" substituted for "${LOGS_DIR}/maininfo2.%d{yyyy-MM-dd}.%i.log.gz"
+20:10:49,113 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1955049794 - Will use gz compression
+20:10:49,113 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1955049794 - Will use the pattern C:/smspring/logs//maininfo2.%d{yyyy-MM-dd}.%i.log for the active file
+20:10:49,113 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7139bd31 - SizeAndTimeBasedFNATP class was renamed as SizeAndTimeBasedFileNamingAndTriggeringPolicy.
+20:10:49,113 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7139bd31 - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/smspring/logs//maininfo2.%d{yyyy-MM-dd}.%i.log.gz'.
+20:10:49,113 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7139bd31 - Roll-over at midnight.
+20:10:49,114 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7139bd31 - Setting initial period to 2025-09-25T01:47:49.050Z
+20:10:49,114 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7139bd31 - Direct use of either SizeAndTimeBasedFNATP or SizeAndTimeBasedFileNamingAndTriggeringPolicy 
+20:10:49,114 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7139bd31 - is deprecated. Please use SizeAndTimeBasedRollingPolicy instead.
+20:10:49,114 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7139bd31 - For more information see https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+20:10:49,115 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE2] - Active log file name: C:/smspring/logs//maininfo2.log
+20:10:49,115 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE2] - Setting currentFileLength to 2491 for C:\smspring\logs\maininfo2.log
+20:10:49,115 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE2] - File property is set to [C:/smspring/logs//maininfo2.log]
+20:10:49,115 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [ADMINDATAFILE3]
+20:10:49,115 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+20:10:49,115 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@77eb5790 - value "C:/smspring/logs//maininfo3.log" substituted for "${LOGS_DIR}/maininfo3.log"
+20:10:49,115 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:10:49,116 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@77eb5790 - value "C:/smspring/logs//maininfo3.%d{yyyy-MM-dd}.%i.log.gz" substituted for "${LOGS_DIR}/maininfo3.%d{yyyy-MM-dd}.%i.log.gz"
+20:10:49,116 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@429639728 - Will use gz compression
+20:10:49,116 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@429639728 - Will use the pattern C:/smspring/logs//maininfo3.%d{yyyy-MM-dd}.%i.log for the active file
+20:10:49,116 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4b3fe06e - SizeAndTimeBasedFNATP class was renamed as SizeAndTimeBasedFileNamingAndTriggeringPolicy.
+20:10:49,117 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4b3fe06e - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/smspring/logs//maininfo3.%d{yyyy-MM-dd}.%i.log.gz'.
+20:10:49,117 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4b3fe06e - Roll-over at midnight.
+20:10:49,117 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4b3fe06e - Setting initial period to 2025-09-24T10:50:29.289Z
+20:10:49,117 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4b3fe06e - Direct use of either SizeAndTimeBasedFNATP or SizeAndTimeBasedFileNamingAndTriggeringPolicy 
+20:10:49,117 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4b3fe06e - is deprecated. Please use SizeAndTimeBasedRollingPolicy instead.
+20:10:49,117 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4b3fe06e - For more information see https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+20:10:49,117 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE3] - Active log file name: C:/smspring/logs//maininfo3.log
+20:10:49,117 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE3] - Setting currentFileLength to 498 for C:\smspring\logs\maininfo3.log
+20:10:49,117 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE3] - File property is set to [C:/smspring/logs//maininfo3.log]
+20:10:49,117 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [ADMINDATAFILE4]
+20:10:49,117 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+20:10:49,117 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@77eb5790 - value "C:/smspring/logs//maininfo4.log" substituted for "${LOGS_DIR}/maininfo4.log"
+20:10:49,117 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:10:49,118 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@77eb5790 - value "C:/smspring/logs//maininfo4.%d{yyyy-MM-dd}.%i.log.gz" substituted for "${LOGS_DIR}/maininfo4.%d{yyyy-MM-dd}.%i.log.gz"
+20:10:49,118 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@41633258 - Will use gz compression
+20:10:49,118 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@41633258 - Will use the pattern C:/smspring/logs//maininfo4.%d{yyyy-MM-dd}.%i.log for the active file
+20:10:49,118 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3e17a0a1 - SizeAndTimeBasedFNATP class was renamed as SizeAndTimeBasedFileNamingAndTriggeringPolicy.
+20:10:49,118 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3e17a0a1 - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/smspring/logs//maininfo4.%d{yyyy-MM-dd}.%i.log.gz'.
+20:10:49,118 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3e17a0a1 - Roll-over at midnight.
+20:10:49,119 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3e17a0a1 - Setting initial period to 2025-09-25T01:50:58.639Z
+20:10:49,119 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3e17a0a1 - Direct use of either SizeAndTimeBasedFNATP or SizeAndTimeBasedFileNamingAndTriggeringPolicy 
+20:10:49,119 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3e17a0a1 - is deprecated. Please use SizeAndTimeBasedRollingPolicy instead.
+20:10:49,119 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3e17a0a1 - For more information see https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+20:10:49,119 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE4] - Active log file name: C:/smspring/logs//maininfo4.log
+20:10:49,119 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE4] - Setting currentFileLength to 2496 for C:\smspring\logs\maininfo4.log
+20:10:49,119 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[ADMINDATAFILE4] - File property is set to [C:/smspring/logs//maininfo4.log]
+20:10:49,119 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [LOGIN]
+20:10:49,119 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+20:10:49,119 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@77eb5790 - value "C:/smspring/logs//login.log" substituted for "${LOGS_DIR}/login.log"
+20:10:49,119 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:10:49,120 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@77eb5790 - value "C:/smspring/logs//login.%d{yyyy-MM-dd}.%i.log.gz" substituted for "${LOGS_DIR}/login.%d{yyyy-MM-dd}.%i.log.gz"
+20:10:49,120 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@2030707995 - Will use gz compression
+20:10:49,120 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@2030707995 - Will use the pattern C:/smspring/logs//login.%d{yyyy-MM-dd}.%i.log for the active file
+20:10:49,120 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4d8286c4 - SizeAndTimeBasedFNATP class was renamed as SizeAndTimeBasedFileNamingAndTriggeringPolicy.
+20:10:49,120 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4d8286c4 - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/smspring/logs//login.%d{yyyy-MM-dd}.%i.log.gz'.
+20:10:49,120 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4d8286c4 - Roll-over at midnight.
+20:10:49,121 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4d8286c4 - Setting initial period to 2025-10-27T11:07:50.594Z
+20:10:49,121 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4d8286c4 - Direct use of either SizeAndTimeBasedFNATP or SizeAndTimeBasedFileNamingAndTriggeringPolicy 
+20:10:49,121 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4d8286c4 - is deprecated. Please use SizeAndTimeBasedRollingPolicy instead.
+20:10:49,121 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@4d8286c4 - For more information see https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+20:10:49,121 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[LOGIN] - Active log file name: C:/smspring/logs//login.log
+20:10:49,122 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[LOGIN] - Setting currentFileLength to 2503 for C:\smspring\logs\login.log
+20:10:49,122 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[LOGIN] - File property is set to [C:/smspring/logs//login.log]
+20:10:49,122 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CLICK]
+20:10:49,122 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+20:10:49,123 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@77eb5790 - value "C:/smspring/logs//click.log" substituted for "${LOGS_DIR}/click.log"
+20:10:49,123 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:10:49,126 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@77eb5790 - value "C:/smspring/logs//click.%d{yyyy-MM-dd}.%i.log.gz" substituted for "${LOGS_DIR}/click.%d{yyyy-MM-dd}.%i.log.gz"
+20:10:49,127 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@353296011 - Will use gz compression
+20:10:49,127 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@353296011 - Will use the pattern C:/smspring/logs//click.%d{yyyy-MM-dd}.%i.log for the active file
+20:10:49,127 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@161f6623 - SizeAndTimeBasedFNATP class was renamed as SizeAndTimeBasedFileNamingAndTriggeringPolicy.
+20:10:49,127 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@161f6623 - The date pattern is 'yyyy-MM-dd' from file name pattern 'C:/smspring/logs//click.%d{yyyy-MM-dd}.%i.log.gz'.
+20:10:49,127 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@161f6623 - Roll-over at midnight.
+20:10:49,128 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@161f6623 - Setting initial period to 2025-09-29T04:28:59.449Z
+20:10:49,128 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@161f6623 - Direct use of either SizeAndTimeBasedFNATP or SizeAndTimeBasedFileNamingAndTriggeringPolicy 
+20:10:49,128 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@161f6623 - is deprecated. Please use SizeAndTimeBasedRollingPolicy instead.
+20:10:49,128 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@161f6623 - For more information see https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+20:10:49,129 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[CLICK] - Active log file name: C:/smspring/logs//click.log
+20:10:49,129 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[CLICK] - Setting currentFileLength to 75 for C:\smspring\logs\click.log
+20:10:49,129 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[CLICK] - File property is set to [C:/smspring/logs//click.log]
+20:10:49,129 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.springframework.web] to DEBUG
+20:10:49,129 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@3e15bb06 - Propagating DEBUG level on Logger[org.springframework.web] onto the JUL framework
+20:10:49,130 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [STDOUT] to Logger[org.springframework.web]
+20:10:49,130 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[org.springframework.web]
+20:10:49,130 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [edu.sm.controller.MainRestController] to INFO
+20:10:49,130 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@3e15bb06 - Propagating INFO level on Logger[edu.sm.controller.MainRestController] onto the JUL framework
+20:10:49,130 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE2] to Logger[edu.sm.controller.MainRestController]
+20:10:49,130 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [edu.sm.app.service.LogoService1] to INFO
+20:10:49,130 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@3e15bb06 - Propagating INFO level on Logger[edu.sm.app.service.LogoService1] onto the JUL framework
+20:10:49,130 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [ADMINDATAFILE1] to Logger[edu.sm.app.service.LogoService1]
+20:10:49,130 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [edu.sm.app.service.LogoService2] to INFO
+20:10:49,130 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@3e15bb06 - Propagating INFO level on Logger[edu.sm.app.service.LogoService2] onto the JUL framework
+20:10:49,130 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [ADMINDATAFILE2] to Logger[edu.sm.app.service.LogoService2]
+20:10:49,130 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [edu.sm.app.service.LogoService3] to INFO
+20:10:49,130 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@3e15bb06 - Propagating INFO level on Logger[edu.sm.app.service.LogoService3] onto the JUL framework
+20:10:49,130 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [ADMINDATAFILE3] to Logger[edu.sm.app.service.LogoService3]
+20:10:49,130 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [edu.sm.app.service.LogoService4] to INFO
+20:10:49,130 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@3e15bb06 - Propagating INFO level on Logger[edu.sm.app.service.LogoService4] onto the JUL framework
+20:10:49,130 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [ADMINDATAFILE4] to Logger[edu.sm.app.service.LogoService4]
+20:10:49,130 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [edu.sm.controller.LoginController] to INFO
+20:10:49,130 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@3e15bb06 - Propagating INFO level on Logger[edu.sm.controller.LoginController] onto the JUL framework
+20:10:49,130 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [LOGIN] to Logger[edu.sm.controller.LoginController]
+20:10:49,130 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [edu.sm.controller.ProductController] to INFO
+20:10:49,130 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@3e15bb06 - Propagating INFO level on Logger[edu.sm.controller.ProductController] onto the JUL framework
+20:10:49,130 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CLICK] to Logger[edu.sm.controller.ProductController]
+20:10:49,130 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+20:10:49,130 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@3e15bb06 - Propagating INFO level on Logger[ROOT] onto the JUL framework
+20:10:49,130 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [STDOUT] to Logger[ROOT]
+20:10:49,130 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc] to OFF
+20:10:49,130 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@3e15bb06 - Propagating OFF level on Logger[jdbc] onto the JUL framework
+20:10:49,130 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.sqlonly] to INFO
+20:10:49,130 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@3e15bb06 - Propagating INFO level on Logger[jdbc.sqlonly] onto the JUL framework
+20:10:49,130 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.sqltiming] to OFF
+20:10:49,130 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@3e15bb06 - Propagating OFF level on Logger[jdbc.sqltiming] onto the JUL framework
+20:10:49,130 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.audit] to OFF
+20:10:49,130 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@3e15bb06 - Propagating OFF level on Logger[jdbc.audit] onto the JUL framework
+20:10:49,130 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.resultset] to OFF
+20:10:49,130 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@3e15bb06 - Propagating OFF level on Logger[jdbc.resultset] onto the JUL framework
+20:10:49,130 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.resultsettable] to INFO
+20:10:49,130 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@3e15bb06 - Propagating INFO level on Logger[jdbc.resultsettable] onto the JUL framework
+20:10:49,130 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [jdbc.connection] to OFF
+20:10:49,130 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@3e15bb06 - Propagating OFF level on Logger[jdbc.connection] onto the JUL framework
+20:10:49,130 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@6778aea6 - End of configuration.
+20:10:49,131 |-INFO in org.springframework.boot.logging.logback.SpringBootJoranConfigurator@4e1ce44 - Registering current configuration as safe fallback point
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::      (v3.4.10-SNAPSHOT)
+
+[10-27 20:10:49] INFO  edu.sm.CspplicationTests - Starting CspplicationTests using Java 17.0.15 with PID 1832 (started by toyoa in C:\smspring\shop)
+[10-27 20:10:49] INFO  edu.sm.CspplicationTests - The following 1 profile is active: "dev"
+[10-27 20:10:49] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4743a322
+[10-27 20:10:49] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4743a322
+[10-27 20:10:50] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+[10-27 20:10:50] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+[10-27 20:10:50] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource test [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+[10-27 20:10:50] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+[10-27 20:10:50] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+[10-27 20:10:50] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+[10-27 20:10:50] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[10-27 20:10:50] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[10-27 20:10:50] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[10-27 20:10:50] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'file [.env]' via location 'optional:file:.env[.properties]' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[10-27 20:10:50] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'class path resource [application-dev.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[10-27 20:10:50] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[10-27 20:10:50] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource applicationInfo [org.springframework.boot.ApplicationInfoPropertySource] to EncryptableMapPropertySourceWrapper
+[10-27 20:10:50] INFO  c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[10-27 20:10:50] INFO  c.u.j.r.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[10-27 20:10:50] INFO  c.u.j.d.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[10-27 20:10:50] INFO  c.u.j.encryptor.DefaultLazyEncryptor - Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@3a109ff7 with name: jasyptStringEncryptor
+[10-27 20:10:51] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 557fe3b0-3bb4-4966-a21c-4178901eb900
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[10-27 20:10:51] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[10-27 20:10:51] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Patterns [/chat/**, /adminchat/**] in 'stompWebSocketHandlerMapping'
+[10-27 20:10:51] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Patterns [/chat/**, /adminchat/**] in 'stompWebSocketHandlerMapping'
+[10-27 20:10:51] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Patterns [/signal] in 'webSocketHandlerMapping'
+[10-27 20:10:51] DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Patterns [/signal] in 'webSocketHandlerMapping'
+[10-27 20:10:51] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[10-27 20:10:51] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 73 mappings in 'requestMappingHandlerMapping'
+[10-27 20:10:51] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 73 mappings in 'requestMappingHandlerMapping'
+[10-27 20:10:52] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /imgs/**, /logs/**] in 'resourceHandlerMapping'
+[10-27 20:10:52] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /imgs/**, /logs/**] in 'resourceHandlerMapping'
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.AdminMsgController:
+	{[MESSAGE],[/adminreceiveto]}: adminreceiveto(Msg,SimpMessageHeaderAccessor)
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.AdminMsgController:
+	{[MESSAGE],[/adminreceiveto]}: adminreceiveto(Msg,SimpMessageHeaderAccessor)
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.ChartController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.ChartController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.ChartRestController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.ChartRestController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.ChatController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.ChatController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.CustController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.CustController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.LoginController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.LoginController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.MainController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.MainController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.MainRest1Controller:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.MainRest1Controller:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.MainRest2Controller:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.MainRest2Controller:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.MainRest3Controller:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.MainRest3Controller:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.MainRest4Controller:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.MainRest4Controller:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.MainRestController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.MainRestController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.MapController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.MapController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.MapRestController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.MapRestController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.MsgController:
+	{[MESSAGE],[/receiveme]}: receiveme(Msg,SimpMessageHeaderAccessor)
+	{[MESSAGE],[/receiveto]}: receiveto(Msg,SimpMessageHeaderAccessor)
+	{[MESSAGE],[/receiveall]}: receiveall(Msg,SimpMessageHeaderAccessor)
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.MsgController:
+	{[MESSAGE],[/receiveme]}: receiveme(Msg,SimpMessageHeaderAccessor)
+	{[MESSAGE],[/receiveto]}: receiveto(Msg,SimpMessageHeaderAccessor)
+	{[MESSAGE],[/receiveall]}: receiveall(Msg,SimpMessageHeaderAccessor)
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.ProductController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	e.s.c.ProductController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	
+[10-27 20:10:52] DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	
+[10-27 20:10:53] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[10-27 20:10:53] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[10-27 20:10:53] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+[10-27 20:10:53] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+[10-27 20:10:53] DEBUG org.springframework.web.SimpLogging - clientOutboundChannel added SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+[10-27 20:10:53] DEBUG org.springframework.web.SimpLogging - clientOutboundChannel added SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+[10-27 20:10:53] DEBUG org.springframework.web.SimpLogging - clientInboundChannel added WebSocketAnnotationMethodMessageHandler[prefixes=[]]
+[10-27 20:10:53] DEBUG org.springframework.web.SimpLogging - clientInboundChannel added WebSocketAnnotationMethodMessageHandler[prefixes=[]]
+[10-27 20:10:53] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+[10-27 20:10:53] DEBUG org.springframework.web.SimpLogging - clientInboundChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@48860139]
+[10-27 20:10:53] DEBUG org.springframework.web.SimpLogging - clientInboundChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@48860139]
+[10-27 20:10:53] DEBUG org.springframework.web.SimpLogging - brokerChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@48860139]
+[10-27 20:10:53] DEBUG org.springframework.web.SimpLogging - brokerChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@48860139]
+[10-27 20:10:53] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@48860139]]
+[10-27 20:10:53] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+[10-27 20:10:53] DEBUG org.springframework.web.SimpLogging - clientInboundChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+[10-27 20:10:53] DEBUG org.springframework.web.SimpLogging - clientInboundChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+[10-27 20:10:53] DEBUG org.springframework.web.SimpLogging - brokerChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+[10-27 20:10:53] DEBUG org.springframework.web.SimpLogging - brokerChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+[10-27 20:10:53] INFO  edu.sm.CspplicationTests - Started CspplicationTests in 4.742 seconds (process running for 7.072)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
